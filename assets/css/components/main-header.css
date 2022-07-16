@@ -1,0 +1,71 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 45px 0;
+}
+
+.apple-icon {
+    position: relative;
+    bottom: 5px;
+}
+
+.main-items {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 20px;
+}
+
+.items {
+    display: inline-block;
+    
+    color: var(--color-grey);
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.main-form {
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    padding-right: 68.8px;
+}
+
+.input-search {
+    box-sizing: border-box;
+    width: 320px;
+    height: 45px;
+
+    background-color: #fff;
+    border: 1.5px solid #747474;
+    border-radius: 6px;
+
+    font-size: 17px;
+    font-weight: 300;
+
+    padding-left: 45px;
+    padding-right: 15px;
+}
+
+.search-icon {
+    position: relative;
+    left: 60px;
+    top: 1.5px;
+}
+
+.hamburguer {
+    display: none;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 36px;
+
+    align-items: center;
+}

@@ -1,0 +1,56 @@
+.main-footer {
+    margin-top: 150px;
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+.subtitle-footer {
+    font-size: 30px;
+    color: var(--color-footer);
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.subtitle-footer.-about {
+    font-size: 18px;
+    font-weight: 300;
+    
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.footer-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.map-items {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 19px;
+    font-weight: 300;
+}
+
+.map-main {
+    font-weight: 400;
+}
+
+.footer-icon {
+    align-self: end;
+    margin-bottom: 20px;
+}
+
+.networks {
+    margin: 0 30px;
+    width: 20px;
+}
+
+.reminder {
+    font-size: 16px;
+
+    font-weight: 300;
+    line-height: 40px;
+}

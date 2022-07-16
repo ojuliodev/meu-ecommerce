@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Assistant';
+}
+
+#container  {
+    box-sizing: border-box;
+    
+    width: 1445px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;   
+}
+
+a {
+    text-decoration: none;
+}
+
+.input-search {
+    outline: 0;
+}
