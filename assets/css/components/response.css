@@ -125,7 +125,7 @@
         font-size: 15px;
     }
 
-    .main-form {
+    .form-search {
         width: 300px;
         padding-right: 50px;
     }
@@ -270,7 +270,7 @@
         display: none;
     }
 
-    .main-form {
+    .form-search {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -366,7 +366,7 @@
 @media only screen and (max-width: 540px) {
 /* Header */
 
-    .main-form {
+    .form-search {
         width: 180px;
     }
 

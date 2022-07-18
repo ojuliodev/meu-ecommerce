@@ -18,7 +18,7 @@ $productCategory = new ProductCategory;
         <li> <a class="items" href="">Sobre</a> </li>
     </ul>
 
-    <form action="" class="main-form">
+    <form action="" class="form-search">
         <img src="assets/images/search.png" class="search-icon" alt="">
         <input type="text" class="input-search">
     </form>

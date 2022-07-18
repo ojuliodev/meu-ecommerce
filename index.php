@@ -25,6 +25,7 @@ $page = $_GET['page'];
         <link rel="stylesheet" href="<?= DIR_CSS ?>/components/main.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/components/main-footer.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/components/response.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/details/style.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

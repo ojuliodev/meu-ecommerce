@@ -3,7 +3,7 @@
 define('ENVIRONMENT', 'production');
 
 // Caso o projeto esteja dentro de uma pasta e não na raiz do www|htdocs
-define('DIR_ROOT', 'ecommerce');
+define('DIR_ROOT', '/ecommerce');
 
 // Define o nome do servidor
 define('DIR_SERVER', $_SERVER['SERVER_NAME']);

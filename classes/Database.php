@@ -1,6 +1,7 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/ecommerce/config/config.php');
+require_once(__DIR__ . '/../config/environment.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . DIR_ROOT . '/config/config.php');
 
 class Database {
     public static function conn() {

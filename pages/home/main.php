@@ -20,12 +20,17 @@ $productCategory = new ProductCategory;
             <article class="products">
                 <?php foreach ($productCategory->readByCategory($category['category_id']) as $product) { ?>
                     <figure class="product-items">
-                        <div class="background-product">
-                            <img class="image-product" src="<?= DIR_IMG ?>/products/<?= $product['product_id'] ?>.jpg" alt="">
-                        </div>
+                        <a href="?page=product&slug=<?= $product['slug'] ?>">
+                            <div class="background-product">
+                                <img class="image-product" src="<?= DIR_IMG ?>/products/placeholder.webp" alt="">
+                            </div>
+                        </a>
 
                         <div class="items-about">
-                            <figcaption class="about"><?= $product['name'] ?></figcaption>
+                            <a href="?page=product&slug=<?= $product['slug'] ?>" class="product-slug">
+                                <figcaption class="about"><?= $product['name'] ?></figcaption>
+                            </a>
+                            
                             <figcaption class="value">R$ <?= $product['price'] ?></figcaption>
                         </div>
                     </figure>
