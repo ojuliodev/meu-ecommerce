@@ -53,6 +53,19 @@ if (isset($_POST['submit'])) {
         </div>
 
         <div class="form-group">
+            <label for="">Imagem</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" name="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Escolha o arquivo</label>
+                </div>
+            </div>
+        </div>  
+
+        <div class="form-group">
             <label for="price">Slug</label>
             <input type="text" class="form-control" id="slug" name="slug" placeholder="Digite o Slug" required>
         </div>

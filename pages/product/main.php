@@ -35,11 +35,11 @@ if (isset($_GET['slug'])) {
                 <h2 class="product-description"><?= $readBySlug['description'] ?></h2>
             </div>
             <div class="cards-wrapper">
-                <img class="card-image" src="assets/images/cards/cartao-visa.png" alt="">
-                <img class="card-image" src="assets/images/cards/cartao-mastercard.png" alt="">
-                <img class="card-image" src="assets/images/cards/cartao america express.png" alt="">
-                <img class="card-image" src="assets/images/cards/payment.png" alt="">
-                <img class="card-image" src="assets/images/cards/cartao de credito1.png" alt="">
+                <img class="card-image" src="assets/images/detail/cartao-visa.png" alt="">
+                <img class="card-image" src="assets/images/detail/cartao-mastercard.png" alt="">
+                <img class="card-image" src="assets/images/detail/cartao america express.png" alt="">
+                <img class="card-image" src="assets/images/detail/payment.png" alt="">
+                <img class="card-image" src="assets/images/detail/cartao de credito1.png" alt="">
             </div>
         </div>
     </div>

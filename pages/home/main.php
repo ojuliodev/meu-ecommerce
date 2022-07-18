@@ -9,7 +9,7 @@ $productCategory = new ProductCategory;
 
 <main class="main">
     <div class="banner">
-        <img class="img-banner" src="assets/images/banner.png" alt="">
+        <img class="img-banner" src="assets/images/frontend/banner.png" alt="">
     </div>
 
     <section class="main-products">

@@ -8,7 +8,7 @@ $productCategory = new ProductCategory;
 
 
 <header class="main-header">
-    <img class="apple-icon" src="assets/images/icon.png" alt="">
+    <img class="apple-icon" src="assets/images/frontend/icon.png" alt="">
 
     <ul class="main-items">
         <li> <a class="items" href="?page=home">Início</a> </li>
@@ -19,16 +19,16 @@ $productCategory = new ProductCategory;
     </ul>
 
     <form action="" class="form-search">
-        <img src="assets/images/search.png" class="search-icon" alt="">
+        <img src="assets/images/frontend/search.png" class="search-icon" alt="">
         <input type="text" class="input-search">
     </form>
 
     <div class="hamburguer">
-        <img class="menu" src="assets/images/menu.png" alt="">
+        <img class="menu" src="assets/images/frontend/menu.png" alt="">
     </div>
 
     <div class="icons">
-        <img class="customer-icon" src="assets/images/customer.png" alt="">
-        <img class="cart-icon" src="assets/images/cart.png" alt="">
+        <img class="customer-icon" src="assets/images/frontend/customer.png" alt="">
+        <img class="cart-icon" src="assets/images/frontend/cart.png" alt="">
     </div>
 </header>

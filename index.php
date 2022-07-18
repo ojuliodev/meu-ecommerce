@@ -21,10 +21,10 @@ $page = $_GET['page'];
         <link rel="stylesheet" href="<?= DIR_CSS ?>/reset.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/color.css">
 
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/components/main-header.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/components/main.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/components/main-footer.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/components/response.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/main-header.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/main.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/main-footer.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/response.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/details/style.css">
 
         <!-- Fonts -->
