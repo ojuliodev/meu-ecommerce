@@ -15,7 +15,7 @@ $category = $productCategory->readBySlug($_GET['slug']);
         <figure class="product-items">
         <a href="?page=product&slug=<?= $product['slug'] ?>">
             <div class="background-product">
-                <img class="image-product" src="<?= DIR_IMG ?>/products/placeholder.webp" alt="">
+                <img class="image-product" src="<?=DIR_IMG . '/' . $product['banner'] ?>" alt="">
             </div>
         </a>
 

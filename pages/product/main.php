@@ -12,7 +12,7 @@ if (isset($_GET['slug'])) {
 
 <div class="container-detail">
     <div class="main-image">
-        <img class="image-item" src="assets/images/detail/cadeira.jpg" alt="">
+        <img class="image-item" src="<?= DIR_IMG . '/' . $readBySlug['banner']?>" alt="">
     </div>
     <div class="product-info">
         <div class="product-wrapper">

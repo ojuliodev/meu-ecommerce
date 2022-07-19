@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 <main class="main-form">
     <h1 class="main-title">Create</h1>
 
-    <form class="main-form" method="POST">
+    <form class="main-form" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="name">Produto</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Digite o Nome" required>
@@ -50,20 +50,12 @@ if (isset($_POST['submit'])) {
         <div class="form-group">
             <label for="author">Desconto</label>
             <input type="number" class="form-control" id="special_price" name="special_price" placeholder="Digite o Desconto" required>
-        </div>
+        </div> 
 
         <div class="form-group">
-            <label for="">Imagem</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                </div>
-                <div class="custom-file">
-                    <input type="file" name="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile01">Escolha o arquivo</label>
-                </div>
-            </div>
-        </div>  
+            <label for="formFile" class="form-label">Imagem</label>
+            <input class="form-control" name="image" type="file" id="formFile">
+        </div> 
 
         <div class="form-group">
             <label for="price">Slug</label>

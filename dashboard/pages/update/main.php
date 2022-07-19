@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 <main class="main-form">  
     <h1 class="main-title">Update</h1>
 
-    <form class="main-form" method="POST">
+    <form class="main-form" method="POST" enctype="multipart/form-data">
 
         <input type="hidden" class="form-control" id="name" name="product_id" required value="<?= $data['product_id'] ?>">
 
@@ -35,7 +35,8 @@ if (isset($_POST['submit'])) {
         <div class="form-group">
             <label for="category">Categoria</label>
             <select class="form-control" name="category_id" id="category_id" required>
-                <option value="1" selected>Games</option>
+                <option value="" selected disable>Selecione a categoria</option>
+                <option value="1">Games</option>
                 <option value="2">Livros</option>
                 <option value="3">Eletrônicos</option>
                 <option value="4">Moda</option>
@@ -56,6 +57,11 @@ if (isset($_POST['submit'])) {
         <div class="form-group">
             <label for="author">Desconto</label>
             <input type="number" class="form-control" id="special_price" name="special_price" placeholder="Digite o Desconto" required value="<?= $data['special_price'] ?>">
+        </div>
+
+        <div class="form-group">
+            <label for="formFile" class="form-label">Imagem</label>
+            <input class="form-control" name="image" type="file" id="formFile">
         </div>
 
         <div class="form-group">
