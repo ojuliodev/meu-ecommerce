@@ -1,12 +1,12 @@
 <?php
 
+error_reporting(E_ALL);
+
 session_start();
 
 echo __DIR__;
 
 echo '<h1>salve</h1>';
-
-exit();
 
 require_once('config/environment.php');
 
