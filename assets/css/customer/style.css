@@ -1,0 +1,126 @@
+.customer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 110px;
+}
+
+.customer-main-title {
+    font-weight: 400;
+    font-size: 35px;
+
+    color:#292929;
+
+    margin-bottom: 35px;
+}
+
+.customer-main-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin-bottom: 13px;
+}
+
+.customer-main-form input{
+    width: 425px;
+    height: 47px;
+    padding-left: 20px;
+
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #121212;
+}
+
+.customer-recover-password {
+    font-weight: 300;
+
+    font-size: 15px;
+
+    text-decoration: underline;
+    color: #292929;
+
+    margin-bottom: 40px;
+}
+
+.customer-main-button {
+    width: 150px;
+    height: 50px;
+
+    background-color: #000;
+
+    border: none;
+    border-radius: 3px;
+
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    transition: transform 150ms cubic-bezier(.45,.97,.68,2.48);
+
+    cursor: pointer;
+}
+
+.customer-main-button:hover {
+    transform: scale(1.04);
+}
+
+.customer-create-account {
+    color:#292929;
+
+    font-weight: 300;
+    font-weight: 13px;
+
+    text-decoration: underline;
+}
+
+.flash-message {
+    display: flex;
+    justify-content: end;
+
+    border-radius: 5px;
+
+    padding: 0 15px;
+    font-size: 22px;
+
+    width: 100%;
+    text-align: center;
+    margin-bottom: -60px;
+
+    animation: message 0.4s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes message {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.ms{ 
+    width:400px;
+    padding: 10px;
+    text-align: center;
+    display:block;
+    font-family:Verdana, Arial, Helvetica, sans-serif; 
+    font-weight:100; 
+    font-size:16px;
+}
+	 
+.erro { background-color:#FFCACA; border:2px #a60202 solid; color:#a60202; border-radius:5px; }
+.ok   { background-color:#A6FFBC; border:2px #00bd00 solid; color:#00bd00; border-radius:5px; }

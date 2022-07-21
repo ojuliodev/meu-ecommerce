@@ -5,34 +5,44 @@ require_once(__DIR__ . '../../../models/Product.php');
 $product = new Product;
 
 if (isset($_GET['slug'])) {
-    $readBySlug = $product->readBySlug($_GET['slug']);
+    $product = $product->readBySlug($_GET['slug']);
+}
+
+if (isset($_GET['insert']) && isset($_SESSION['customer'])) {
+    if (empty($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
+    }
+
+    array_push($_SESSION['cart'], $product);
+
+    header("Location: index.php?page=cart");
 }
 
 ?>
 
-<div class="container-detail">
+<main class="container-detail">
     <div class="main-image">
-        <img class="image-item" src="<?= DIR_IMG . '/' . $readBySlug['banner']?>" alt="">
+        <img class="image-item" src="<?= DIR_IMG . '/' . $product['banner']?>" alt="">
     </div>
     <div class="product-info">
         <div class="product-wrapper">
             <div class="infos-wrapper">
-                <h1 class="title-product"><?= $readBySlug['name'] ?></h1>
+                <h1 class="title-product"><?= $product['name'] ?></h1>
 
-                <?php $readBySlug['status'] == 1 ? $statusColor = 'status-sucess' : $statusColor = 'status-danger' ?>
-                <p class="product-status <?= $statusColor ?>"><?php echo $readBySlug['status'] == 1 ?'Produto Disponível' : 'Produto indisponível' ?> </p>
+                <?php $product['status'] == 1 ? $statusColor = 'status-sucess' : $statusColor = 'status-danger' ?>
+                <p class="product-status <?= $statusColor ?>"><?php echo $product['status'] == 1 ?'Produto Disponível' : 'Produto indisponível' ?> </p>
 
                 <p class="description-price">à vista</p>
 
                 <div class="main-price">
-                    <h3 class="special-price">R$ <?= $readBySlug['special_price'] ?></h3>
+                    <h3 class="special-price">R$ <?= $product['special_price'] ?></h3>
 
-                    <h4 class="price">R$ <?= $readBySlug['price'] ?></h4>
+                    <h4 class="price">R$ <?= $product['price'] ?></h4>
                 </div>
 
-                <button class="button-cart"> <img class="cart-button" src="assets/images/detail/cart.png" alt=""> ADICIONAR AO CARRINHO</button>
+                <a class="button-cart" href="<?= isset($_SESSION['customer']) ? '?page=product&slug=' . $product['slug']. '&insert=cart' : '?page=customer' ?>"> ADICIONAR AO CARRINHO</a>
 
-                <h2 class="product-description"><?= $readBySlug['description'] ?></h2>
+                <h2 class="product-description"><?= $product['description'] ?></h2>
             </div>
             <div class="cards-wrapper">
                 <img class="card-image" src="assets/images/detail/cartao-visa.png" alt="">
@@ -43,4 +53,4 @@ if (isset($_GET['slug'])) {
             </div>
         </div>
     </div>
-</div>
+</main>

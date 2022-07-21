@@ -4,14 +4,12 @@
 
 .banner {
     text-align: center;
-}
-
-.banner {
     margin-bottom: 140px;
 }
 
 .img-banner {
     width: 770px;
+    cursor: pointer;
 }
 
 .main-subtitle {

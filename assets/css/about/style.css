@@ -1,0 +1,22 @@
+.about-wrapper {
+    width: 600px;
+    margin: 0 auto;
+
+    margin-top: 60px;
+}
+
+.about-main-title {
+    text-align: center;
+    font-size: 40px;
+    color: var(--color-footer);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.ecommerce-about {
+    font-size: 18px;
+    line-height: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+    word-spacing: 2px;
+}

@@ -15,11 +15,11 @@
         </ul>
 
         <div class="footer-icon">
-            <img class="networks"  src="assets/images/frontend/instagram.png" alt="">
-            <img class="networks" src="assets/images/frontend/facebook-app-logo.png" alt="">
-            <img class="networks" src="assets/images/frontend/twitter.png" alt="">
+            <a href=""><img class="networks"  src="assets/images/frontend/instagram.png" alt=""></a>
+            <a href=""><img class="networks" src="assets/images/frontend/facebook-app-logo.png" alt=""></a>
+            <a href=""><img class="networks" src="assets/images/frontend/twitter.png" alt=""></a>
         </div>
 
-        <p class="reminder"> <span class="map-main">Lembrete</span> <br> Comprando na nossa loja oficial você apoia nosso <br> trabalho e nos  ajuda a se tornar cada vez melhor! </p>
+        <p class="reminder"> <span class="map-main">Lembrete</span> <br> Comprando na nossa loja oficial você apoia nosso <br> trabalho e nos  ajuda a se tornar cada vez melhores!</p>
     </div>
 </footer>

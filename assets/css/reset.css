@@ -4,6 +4,13 @@
     font-family: 'Assistant';
 }
 
+*::selection {
+    background-color: #b4b4b4a1;
+}
+
+/* --color-black: #121212;
+    --color-footer: #292929; */
+
 #container  {
     box-sizing: border-box;
     

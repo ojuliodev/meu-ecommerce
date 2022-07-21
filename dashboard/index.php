@@ -12,6 +12,7 @@ $page = $_GET['page'];
 <html lang="pt-BR">
     <head>
         <!-- Title -->
+        <link rel="shortcut icon" href="../assets/images/frontend/favicon.png" type="image/x-icon">
         <title>Ecommerce</title>
 
         <!-- Meta TAGs -->

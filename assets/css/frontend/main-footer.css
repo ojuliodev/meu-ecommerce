@@ -32,6 +32,7 @@
     font-size: 16px;
     margin-bottom: 19px;
     font-weight: 300;
+    cursor: pointer;
 }
 
 .map-main {
@@ -39,12 +40,15 @@
 }
 
 .footer-icon {
+    display: flex;
     align-self: end;
+    justify-content: center;
+    gap: 60px;
+
     margin-bottom: 20px;
 }
 
 .networks {
-    margin: 0 30px;
     width: 20px;
 }
 
@@ -53,4 +57,8 @@
 
     font-weight: 300;
     line-height: 40px;
+}
+
+.by-create {
+    display: block;
 }

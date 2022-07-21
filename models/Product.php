@@ -91,7 +91,7 @@ class Product extends Database
 
             $this->stmt->execute();
 
-            return $this->stmt->fetch();
+            return $this->stmt->fetch(PDO::FETCH_ASSOC);
 
         } catch (PDOException $e) {
             return $e->getMessage();
@@ -155,6 +155,8 @@ class Product extends Database
     public function delete(int $id): bool
     {
         try {
+            $product = $this->readById($id);
+
             $this->setSql("DELETE FROM " . DB_TABLE . " WHERE product_id = $id");
 
             $this->stmt = $this->conn()->prepare($this->getSql());
@@ -162,6 +164,12 @@ class Product extends Database
             $this->stmt->execute();
 
             if ($this->stmt->rowCount()) {
+                $destiny = __DIR__ . '/../assets/images/';
+
+                if (file_exists($destiny . $product['banner'])) {
+                    unlink($destiny . $product['banner']);
+                }
+
                 return true;
             } else {
                 return false;

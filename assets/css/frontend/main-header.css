@@ -9,6 +9,7 @@
 .apple-icon {
     position: relative;
     bottom: 5px;
+    cursor: pointer;
 }
 
 .main-items {

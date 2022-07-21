@@ -1,15 +1,21 @@
 <?php
 
+session_start();
+
 require_once('config/environment.php');
 
 $page = $_GET['page'];
-
+$action = isset($_GET['action']) ? $_GET['action'] : 'main';
+echo '<pre>';
+    // print_r($_SESSION);
+echo '</pre>';
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <!-- Title -->
+        <link rel="shortcut icon" href="assets/images/frontend/favicon.png" type="image/x-icon">
         <title>Ecommerce</title>
 
         <!-- Meta TAGs -->
@@ -26,6 +32,8 @@ $page = $_GET['page'];
         <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/main-footer.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/response.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/details/style.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/style.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/about/style.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,8 +46,8 @@ $page = $_GET['page'];
 
             <?php  
 
-            if (file_exists( __DIR__ . '/pages/' . $page . '/main.php')) {
-                require_once( __DIR__ . '/pages/' . $page . '/main.php');
+            if (file_exists(__DIR__ . "/pages/$page/$action.php")) {
+                require_once(__DIR__ . "/pages/$page/$action.php");
             } else {
                 header("Location: index.php?page=home");
             }

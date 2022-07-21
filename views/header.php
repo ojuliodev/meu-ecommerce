@@ -15,7 +15,7 @@ $productCategory = new ProductCategory;
         <?php foreach($productCategory->read() as $category) { ?>
             <li> <a class="items" href="<?= DIR_PATH . '?page=category&slug=' . $category['slug']?>"><?= $category['name'] ?></a> </li>
         <?php } ?>
-        <li> <a class="items" href="">Sobre</a> </li>
+        <li> <a class="items" href="?page=about">Sobre</a> </li>
     </ul>
 
     <form action="" class="form-search">
@@ -28,7 +28,7 @@ $productCategory = new ProductCategory;
     </div>
 
     <div class="icons">
-        <img class="customer-icon" src="assets/images/frontend/customer.png" alt="">
-        <img class="cart-icon" src="assets/images/frontend/cart.png" alt="">
+        <a href="?page=customer<?= !empty($_SESSION['customer']) ? '&action=read' : ''?>"> <img class="customer-icon" src="assets/images/frontend/customer.png" alt=""> </a>
+        <a href="?page=cart"> <img class="cart-icon" src="assets/images/frontend/cart.png" alt=""> </a>
     </div>
 </header>

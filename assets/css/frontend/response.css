@@ -211,9 +211,12 @@
         font-size: 14px;
     }
 
+    .footer-icon {
+        gap: 48px;
+    }
+
     .networks {
         width: 16px;
-        margin: 0 24px;
     }
 
     .reminder {
@@ -252,9 +255,12 @@
         font-size: 13px;
     }
 
+    .footer-icon {
+        gap: 40px;
+    }
+
     .networks {
         width: 14px;
-        margin: 0 20px;
     }
 
     .reminder {
@@ -351,7 +357,6 @@
 
     .networks {
         width: 14px;
-        margin: 0 20px;
         display: none;
     }
 
