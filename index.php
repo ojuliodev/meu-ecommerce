@@ -2,13 +2,16 @@
 
 session_start();
 
+echo __DIR__;
+
+echo '<h1>salve</h1>';
+
+exit();
+
 require_once('config/environment.php');
 
 $page = $_GET['page'];
 $action = isset($_GET['action']) ? $_GET['action'] : 'main';
-echo '<pre>';
-    // print_r($_SESSION);
-echo '</pre>';
 ?>
 
 <!DOCTYPE html>
