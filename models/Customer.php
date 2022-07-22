@@ -51,21 +51,6 @@ class Customer extends Database{
         }
     }
 
-    public function read()
-    {
-        try {
-            $this->setSql("SELECT * from " . $this->table . "");
-
-            $this->stmt = $this->conn->prepare($this->getSql());
-    
-            $this->stmt->execute();
-
-            return $this->stmt->fetchAll();
-        } catch (PDOException $e) {
-            $e->getMessage();
-        }
-    }
-
     public function login($data)
     {
         try {
@@ -95,6 +80,25 @@ class Customer extends Database{
             $this->stmt->execute();
 
             return $this->stmt->fetch();
+        } catch (PDOException $e) {
+            $e->getMessage();
+        }
+    }
+
+    public function readByEmail($email)
+    {
+        try {
+            $this->setSql("SELECT * from " . $this->table . " WHERE email = '$email' ");
+
+            $this->stmt = $this->conn->prepare($this->getSql());
+    
+            $this->stmt->execute();
+
+            if ($this->stmt->rowCount()) {
+                return $this->stmt->fetch();
+            } else {
+                return false;
+            }
         } catch (PDOException $e) {
             $e->getMessage();
         }

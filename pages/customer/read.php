@@ -55,9 +55,9 @@ if (isset($_SESSION['customer'])) {
     <?php if (isset($orders)): ?>
         <h2 class="customer-order-title">Todos os Pedidos</h2>
         <ul class="customer-list-products">
-            <?php foreach($orders as $order => $products): ?>
+            <?php $index = 1; foreach($orders as $order => $products):?>
                 <li class="customer-orders">
-                    <p><?= "Pedido " . $order + 1 ?></p>
+                    <p><?= "Pedido $index" ?></p>
                     <?php foreach($products as $product): ?>
 
                         <div class="customer-order">
@@ -68,7 +68,7 @@ if (isset($_SESSION['customer'])) {
                             <a class="customer-button" href="?page=product&slug=<?= $product['slug'] ?>">Ver Produto</a>
                         </div>
 
-                    <?php endforeach ?>
+                    <?php $index++; endforeach ?>
                 </li>
             <?php endforeach ?>
         </ul>

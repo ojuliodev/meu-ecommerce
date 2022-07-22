@@ -4,16 +4,10 @@ require_once(__DIR__ . '/../../models/Customer.php');
 
 $customer = new Customer;
 
-$read = $customer->read();
-
 if (isset($_POST['submit'])) {
-    foreach ($read as $email) {
-        if ($email['email'] == $_POST['email']) {
-           $checkEmail = false;
-        }
-   }
+    $email = $customer->readByEmail($_POST['email']);
 
-    if ($_POST['password'] == $_POST['confirm-password'] && !isset($checkEmail)) {
+    if ($_POST['password'] == $_POST['confirm-password'] && !$email) {
         $create = $customer->create($_POST);
 
         if($create) {
@@ -29,7 +23,7 @@ if (isset($_POST['submit'])) {
                 <span class="ms erro"><?= $_SESSION['msg'] ?></span>
             </div>
         <?php  unset($_SESSION['msg']); 
-    } elseif(isset($checkEmail)) {
+    } elseif($email) {
         $_SESSION['msg'] = "Email já cadastrado!";?>
 
             <div class="flash-message">
