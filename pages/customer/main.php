@@ -19,6 +19,8 @@ if (isset($_POST['submit'])) {
         header("Location: ?page=customer&action=read&user=" . $customer['customer_id'] . "");
 
         $_SESSION['customer'] = $customer;
+
+        $_SESSION['msg'] = "Login efetuado com sucesso!";
     } else {
         if (isset($_POST['submit'])) {
         $_SESSION['msg'] = "Email ou Senha inválidos!";?>
@@ -46,7 +48,7 @@ if (isset($_POST['submit'])) {
             <a href="" class="customer-recover-password">Esqueceu a senha?</a>
 
             <button type="submit" name="submit" class="customer-main-button">Fazer Login</button>
-    </form>
+        </form>
     </div>
 
     <a href="?page=customer&action=create" class="customer-create-account">Criar conta</a>

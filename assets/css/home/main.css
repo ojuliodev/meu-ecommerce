@@ -72,6 +72,7 @@
 
 .image-product {
     width: 220px;
+    height: 220px;
 }
 
 .items-about {
@@ -92,4 +93,12 @@
 
 .product-slug {
     color: var(--color-footer);
+}
+
+.search-title {
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--color-black);
+    margin-top: 20px;
+    margin-bottom: 10px;
 }

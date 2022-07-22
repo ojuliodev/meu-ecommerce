@@ -68,6 +68,7 @@
 
     .image-product {
         width: 185px;
+        width: 185px;
     }
 
     .about {
@@ -178,6 +179,7 @@
 
     .image-product {
         width: 70%;
+        height: 70%;
     }
 
     .products {

@@ -1,7 +1,7 @@
 <footer class="main-footer">
     <h2 class="subtitle-footer">Name Aqui</h2>
 
-    <h3 class="subtitle-footer -about">Seu ecommerce preferido</h3>
+    <h3 class="subtitle-footer -about">Seu e-commerce preferido</h3>
 
     <div class="footer-about">
         <ul class="map">
@@ -15,9 +15,9 @@
         </ul>
 
         <div class="footer-icon">
-            <a href=""><img class="networks"  src="assets/images/frontend/instagram.png" alt=""></a>
-            <a href=""><img class="networks" src="assets/images/frontend/facebook-app-logo.png" alt=""></a>
-            <a href=""><img class="networks" src="assets/images/frontend/twitter.png" alt=""></a>
+            <a href=""><img class="networks"  src="assets/images/home/instagram.png" alt=""></a>
+            <a href=""><img class="networks" src="assets/images/home/facebook-app-logo.png" alt=""></a>
+            <a href=""><img class="networks" src="assets/images/home/twitter.png" alt=""></a>
         </div>
 
         <p class="reminder"> <span class="map-main">Lembrete</span> <br> Comprando na nossa loja oficial você apoia nosso <br> trabalho e nos  ajuda a se tornar cada vez melhores!</p>

@@ -26,6 +26,7 @@ if (isset($_SESSION['msg'])) { ?>
             <th>Descrição</th>
             <th>Valor</th>
             <th>Desconto</th>
+            <th>Quantidade</th>
             <th>Slug</th>
             <th>Status</th>
         </tr>
@@ -41,6 +42,7 @@ if (isset($_SESSION['msg'])) { ?>
             <td><?php echo $value['description'] ?></td>
             <td><?php echo $value['price'] ?></td>
             <td><?php echo $value['special_price'] ?></td>
+            <td><?php echo $value['amount'] ?></td>
             <td><?php echo $value['slug'] ?></td>
             <td><?php echo $value['status'] ?></td>
 

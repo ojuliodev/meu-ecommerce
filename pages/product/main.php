@@ -8,14 +8,33 @@ if (isset($_GET['slug'])) {
     $product = $product->readBySlug($_GET['slug']);
 }
 
-if (isset($_GET['insert']) && isset($_SESSION['customer'])) {
+if (isset($_GET['insert']) && isset($_SESSION['customer']) && $product['amount'] > 0 && $product['status'] == 1) {
     if (empty($_SESSION['cart'])) {
         $_SESSION['cart'] = [];
     }
 
-    array_push($_SESSION['cart'], $product);
+    $index = array_search($product['product_id'], array_column($_SESSION['cart'], 'product_id'));
 
-    header("Location: index.php?page=cart");
+    if ($index !== false) {
+        $_SESSION['cart'][$index]['quantity'] = $_SESSION['cart'][$index]['quantity'] + 1;
+
+        header("Location: index.php?page=cart");
+    } else {
+        $product['quantity'] = 1;
+
+        unset($product['description']);
+
+        array_push($_SESSION['cart'], $product);
+
+        header("Location: index.php?page=cart");
+    }      
+} elseif (isset($_GET['insert']) && ( $product['amount'] <= 0 || $product['status'] == 0 )) {
+    $_SESSION['msg'] = "Produto indisponível"; ?>
+
+    <div class="flash-message">
+        <span class="ms erro"><?= $_SESSION['msg'] ?></span>
+    </div>
+    <?php  unset($_SESSION['msg']);
 }
 
 ?>
@@ -29,8 +48,8 @@ if (isset($_GET['insert']) && isset($_SESSION['customer'])) {
             <div class="infos-wrapper">
                 <h1 class="title-product"><?= $product['name'] ?></h1>
 
-                <?php $product['status'] == 1 ? $statusColor = 'status-sucess' : $statusColor = 'status-danger' ?>
-                <p class="product-status <?= $statusColor ?>"><?php echo $product['status'] == 1 ?'Produto Disponível' : 'Produto indisponível' ?> </p>
+                <?php $product['status'] == 1 && $product['amount'] > 0 ? $statusColor = 'status-sucess' : $statusColor = 'status-danger' ?>
+                <p class="product-status <?= $statusColor ?>"><?php echo $product['status'] == 1 && $product['amount'] > 0 ?'Produto Disponível' : 'Produto indisponível' ?> </p>
 
                 <p class="description-price">à vista</p>
 

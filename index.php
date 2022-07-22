@@ -15,8 +15,8 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
 <html lang="pt-BR">
     <head>
         <!-- Title -->
-        <link rel="shortcut icon" href="assets/images/frontend/favicon.png" type="image/x-icon">
-        <title>Ecommerce</title>
+        <link rel="shortcut icon" href="assets/images/home/favicon.png" type="image/x-icon">
+        <title>E-commerce</title>
 
         <!-- Meta TAGs -->
         <meta charset="UTF-8">
@@ -27,18 +27,19 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
         <link rel="stylesheet" href="<?= DIR_CSS ?>/reset.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/color.css">
 
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/main-header.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/main.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/main-footer.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/frontend/response.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main-header.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main-footer.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/home/response.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/details/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/about/style.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/cart/style.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div id="container">

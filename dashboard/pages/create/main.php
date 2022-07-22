@@ -38,6 +38,11 @@ if (isset($_POST['submit'])) {
         </div>
 
         <div class="form-group">
+            <label for="number">Quantidade</label>
+            <input type="number" class="form-control" id="amount" name="amount" placeholder="Digite a Quantidade" required>
+        </div>
+
+        <div class="form-group">
             <label for="author">Descrição</label>
             <input type="text" class="form-control" id="description" name="description" placeholder="Digite a Descrição" required>
         </div>

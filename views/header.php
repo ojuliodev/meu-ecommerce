@@ -8,7 +8,7 @@ $productCategory = new ProductCategory;
 
 
 <header class="main-header">
-    <img class="apple-icon" src="assets/images/frontend/icon.png" alt="">
+    <img class="apple-icon" src="assets/images/home/icon.png" alt="">
 
     <ul class="main-items">
         <li> <a class="items" href="?page=home">Início</a> </li>
@@ -18,17 +18,18 @@ $productCategory = new ProductCategory;
         <li> <a class="items" href="?page=about">Sobre</a> </li>
     </ul>
 
-    <form action="" class="form-search">
-        <img src="assets/images/frontend/search.png" class="search-icon" alt="">
-        <input type="text" class="input-search">
+    <form class="form-search" method="GET">
+        <img src="assets/images/home/search.png" class="search-icon" alt="">
+        <input type="hidden" name="page" class="input-search" value="search">
+        <input type="text" name="search" class="input-search">
     </form>
 
     <div class="hamburguer">
-        <img class="menu" src="assets/images/frontend/menu.png" alt="">
+        <img class="menu" src="assets/images/home/menu.png" alt="">
     </div>
 
     <div class="icons">
-        <a href="?page=customer<?= !empty($_SESSION['customer']) ? '&action=read' : ''?>"> <img class="customer-icon" src="assets/images/frontend/customer.png" alt=""> </a>
-        <a href="?page=cart"> <img class="cart-icon" src="assets/images/frontend/cart.png" alt=""> </a>
+        <a href="?page=customer<?= !empty($_SESSION['customer']) ? '&action=read' : ''?>"> <img class="customer-icon" src="assets/images/home/customer.png" alt=""> </a>
+        <a href="?page=cart"> <img class="cart-icon" src="assets/images/home/cart.png" alt=""> </a>
     </div>
 </header>
