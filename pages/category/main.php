@@ -12,10 +12,14 @@ $category = $productCategory->readBySlug($_GET['slug']);
 
 <article class="products">
     <?php foreach ($productCategory->readByCategory($category['category_id']) as $product) { ?>
+        <?php $image = file_exists(DIR_IMG . '/' . $product['banner']) 
+            ? DIR_IMG . '/' . $product['banner'] 
+            : DIR_IMG . '/products/placeholder.png'; ?>
+
         <figure class="product-items">
         <a href="?page=product&slug=<?= $product['slug'] ?>">
             <div class="background-product">
-                <img class="image-product" src="<?=DIR_IMG . '/' . $product['banner'] ?>" alt="">
+                <img class="image-product" src="<?= $image ?>" alt="">
             </div>
         </a>
 

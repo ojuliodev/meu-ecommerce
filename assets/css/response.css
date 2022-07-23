@@ -326,6 +326,10 @@
 @media only screen and (max-width: 800px) {
 /* Header */
 
+    .main-header {
+        padding: 25px 0;
+    }
+
     .main-items {
         display: none;
     }
@@ -371,8 +375,12 @@
 
 /* Main */
 
+    .main {
+        margin-top: 10px;
+    }
+
     .banner {
-        margin-bottom: 80px;
+        margin-bottom: 40px;
     }
 
     .background-product {
@@ -490,10 +498,6 @@
 }
 
 @media only screen and (max-width: 540px) {
-    .main {
-        margin-top: 50px;
-    }
-
     .form-search {
         width: 80%;
     }
@@ -610,9 +614,6 @@
 }
 
 @media only screen and (max-width: 425px) {
-    .main {
-        margin-top: 30px;
-    }
 
     .input-search {
         width: 200px;

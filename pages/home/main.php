@@ -14,28 +14,32 @@ $productCategory = new ProductCategory;
 
     <section class="main-products">
         <?php foreach ($productCategory->read() as $category) { ?>
-            
-            <h2 class="main-subtitle"><?=  $category['name']; ?></h2>
+            <?php $products = $productCategory->readByCategory($category['category_id'])?>
 
-            <article class="products">
-                <?php foreach ($productCategory->readByCategory($category['category_id']) as $product) { ?>
-                    <figure class="product-items">
-                        <a href="?page=product&slug=<?= $product['slug'] ?>">
-                            <div class="background-product">
-                                <img class="image-product" src="<?=DIR_IMG . '/' . $product['banner'] ?>" alt="">
-                            </div>
-                        </a>
+            <?php if (count($products)): ?>
+                <h2 class="main-subtitle"><?=  $category['name']; ?></h2>
 
-                        <div class="items-about">
-                            <a href="?page=product&slug=<?= $product['slug'] ?>" class="product-slug">
-                                <figcaption class="about"><?= $product['name'] ?></figcaption>
+                <article class="products">
+                    <?php foreach ($products as $product) { ?>
+                        <?php $image = file_exists(DIR_IMG . '/' . $product['banner']) ? DIR_IMG . '/' . $product['banner'] : DIR_IMG . '/products/placeholder.png'; ?>
+                        <figure class="product-items">
+                            <a href="?page=product&slug=<?= $product['slug'] ?>">
+                                <div class="background-product">
+                                    <img class="image-product" src="<?= $image ?>" alt="">
+                                </div>
                             </a>
-                            
-                            <figcaption class="value">R$ <?= $product['price'] ?></figcaption>
-                        </div>
-                    </figure>
-                <?php } ?>
-            </article>
+
+                            <div class="items-about">
+                                <a href="?page=product&slug=<?= $product['slug'] ?>" class="product-slug">
+                                    <figcaption class="about"><?= $product['name'] ?></figcaption>
+                                </a>
+                                
+                                <figcaption class="value">R$ <?= $product['price'] ?></figcaption>
+                            </div>
+                        </figure>
+                    <?php } ?>
+                </article>
+            <?php endif ?>
         <?php } ?>
     </section>
 </main>

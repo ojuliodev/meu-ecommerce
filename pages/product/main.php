@@ -40,8 +40,12 @@ if (isset($_GET['insert']) && isset($_SESSION['customer']) && $product['amount']
 ?>
 
 <main class="container-detail">
+    <?php $image = file_exists(DIR_IMG . '/' . $product['banner']) 
+        ? DIR_IMG . '/' . $product['banner'] 
+        : DIR_IMG . '/products/placeholder.png'; ?>
+
     <div class="main-image">
-        <img class="image-item" src="<?= DIR_IMG . '/' . $product['banner']?>" alt="">
+        <img class="image-item" src="<?= $image ?>" alt="">
     </div>
     <div class="product-info">
         <div class="product-wrapper">
