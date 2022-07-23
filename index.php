@@ -32,12 +32,12 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main-header.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main-footer.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/response.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/details/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/edit/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/about/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/cart/style.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/response.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

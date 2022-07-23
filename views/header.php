@@ -8,7 +8,7 @@ $productCategory = new ProductCategory;
 
 
 <header class="main-header">
-    <img class="apple-icon" src="assets/images/home/header/icon.png" alt="">
+    <a href="?page=home"><img class="apple-icon" src="assets/images/home/header/icon.png" alt=""></a>
 
     <ul class="main-items">
         <li> <a class="items" href="?page=home">Início</a> </li>
