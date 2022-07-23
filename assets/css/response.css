@@ -385,7 +385,7 @@
 /* Main */
 
     .main {
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
     .banner {
@@ -512,7 +512,7 @@
 
 @media only screen and (max-width: 540px) {
     .form-search {
-        width: 63%;
+        width: 65%;
     }
 
     .input-search {
@@ -559,7 +559,7 @@
     }
 
     .img-banner {
-        width: 90%;
+        width: 80%;
     }
 
     .banner {
@@ -598,7 +598,12 @@
 
 @media only screen and (max-width: 480px) {
     .input-search {
-        height: 30px;
+        font-size: 12px
+    }
+
+    .search-icon {
+        width: 45px;
+        top: -5px;
     }
 
     .apple-icon {
