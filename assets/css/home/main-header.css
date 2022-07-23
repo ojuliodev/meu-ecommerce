@@ -29,24 +29,21 @@
 }
 
 .form-search {
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-
-    padding-right: 68.8px;
+    position: relative;
+    width: 320px;
+    height: 45px;
 }
 
 .input-search {
     box-sizing: border-box;
-    width: 320px;
-    height: 45px;
+    width: 100%;
+    height: 100%;
 
     background-color: #fff;
     border: 1.5px solid #747474;
     border-radius: 6px;
 
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
 
     padding-left: 45px;
@@ -54,9 +51,9 @@
 }
 
 .search-icon {
-    position: relative;
-    left: 60px;
-    top: 1.5px;
+    position: absolute;
+    left: -8px;
+    top: -10px;
 }
 
 .hamburguer {

@@ -21,14 +21,17 @@
         font-size: 16px;
     }
 
-    .input-search {
+    .form-search {
         width: 250px;
-        height: 40px;
-        font-size: 16px;
+        height: 37px;
     }
 
-    .search-icon {
-        top: 1.2px;
+    .input-search {
+        font-size: 14px;
+    }
+
+    .search-icon { 
+        top: -13px;
     }
 
     .icons {
@@ -117,7 +120,7 @@
     }
 
     .main-items {
-        width: 40%;
+        width: 45%;
     }
 
     .items {
@@ -128,21 +131,18 @@
 
     .form-search {
         width: 300px;
-        padding-right: 50px;
+        height: 30px;
     }
 
     .input-search {
-        width: 300px;
-        height: 30px;
-        padding-left: 25px;
-
+        padding-left: 35px;
         font-size: 13px;
     }
 
     .search-icon {
-        top: 1px;
+        top: -8px;
         width: 50px;
-        left: 40px;
+        left: -3px;
     }
 
     .icons {
@@ -227,6 +227,11 @@
 }
 
 @media only screen and (max-width: 1200px) {
+    .form-search {
+        width: 240px;
+        height: 30px;
+    }
+
     .main-items {
         gap: 10px;
     }
@@ -256,6 +261,10 @@
 
     #container {
         padding: 0 30px;
+    }
+
+    .form-search {
+        width: 200px;
     }
 
     .items {
@@ -366,7 +375,7 @@
     }
 
     .search-icon {
-        top: 0;
+        top: -8px;
     }
 
     .icons {
@@ -468,6 +477,10 @@
 
 @media only screen and (max-width: 690px) {
 
+    .form-search {
+        width: 65%;
+    }
+
     .background-product {
         height: 200px;
     }
@@ -499,7 +512,7 @@
 
 @media only screen and (max-width: 540px) {
     .form-search {
-        width: 80%;
+        width: 63%;
     }
 
     .input-search {
@@ -614,11 +627,6 @@
 }
 
 @media only screen and (max-width: 425px) {
-
-    .input-search {
-        width: 200px;
-    }
-
     /* Main */
     .background-product {
         height: 175px;
