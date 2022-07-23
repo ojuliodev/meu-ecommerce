@@ -15,9 +15,9 @@
         </ul>
 
         <div class="footer-icon">
-            <a href=""><img class="networks"  src="assets/images/home/instagram.png" alt=""></a>
-            <a href=""><img class="networks" src="assets/images/home/facebook-app-logo.png" alt=""></a>
-            <a href=""><img class="networks" src="assets/images/home/twitter.png" alt=""></a>
+            <a href=""><img class="networks"  src="assets/images/home/header/instagram.png" alt=""></a>
+            <a href=""><img class="networks" src="assets/images/home/header/facebook-app-logo.png" alt=""></a>
+            <a href=""><img class="networks" src="assets/images/home/header/twitter.png" alt=""></a>
         </div>
 
         <p class="reminder"> <span class="map-main">Lembrete</span> <br> Comprando na nossa loja oficial você apoia nosso <br> trabalho e nos  ajuda a se tornar cada vez melhores!</p>

@@ -84,9 +84,9 @@ if (isset($_SESSION['customer'])) {
                             <a class="customer-button" href="?page=product&slug=<?= $product['slug'] ?>">Ver Produto</a>
                         </div>
 
-                    <?php $index++; endforeach ?>
+                    <?php endforeach ?>
                 </li>
-            <?php endforeach ?>
+            <?php $index++; endforeach ?>
         </ul>
     <?php endif ?>
 </main>

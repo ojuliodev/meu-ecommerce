@@ -63,12 +63,12 @@
     }
 
     .background-product {
-        height: 300px;
+        height: 280px;
     }
 
     .image-product {
-        width: 185px;
-        width: 185px;
+        width: 70%;
+        height: 63%;
     }
 
     .about {
@@ -174,12 +174,12 @@
     }
 
     .background-product {
-        height: 250px;
+        height: 280px;
     }
 
     .image-product {
         width: 70%;
-        height: 70%;
+        height: 65%;
     }
 
     .products {
@@ -226,6 +226,31 @@
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .main-items {
+        gap: 10px;
+    }
+
+    .background-product {
+        height: 260px;
+    }
+    .image-product {
+        width: 67%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .background-product {
+        height: 245px;
+    }
+
+    .image-product {
+        width: 67%;
+        height: 60%;
+    }
+}
+
 @media only screen and (max-width: 1006px) {
 /* Header */
 
@@ -240,7 +265,12 @@
 /* Main */
 
     .background-product {
-        height: 220px;
+        height: 230px;
+    }
+
+    .image-product {
+        width: 65%;
+        height: 58%;
     }
 
 /* Footer */
@@ -271,6 +301,28 @@
     }
 }
 
+@media only screen and (max-width: 920px) {
+    .main-items {
+        gap: 5px;
+    }
+
+    .background-product {
+        height: 200px;
+    }
+
+    .image-product {
+        width: 66%;
+        height: 59%;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+
+    .background-product {
+        height: 185px;
+    }
+}
+
 @media only screen and (max-width: 800px) {
 /* Header */
 
@@ -282,18 +334,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 400px;
     }
 
     .hamburguer {
-        display: inline-block;
+        display: flex;
     }
     
     .apple-icon {
-        width: 30px;
+        width: 40px;
     }
 
     .menu {
-        width: 20px;
+        width: 25px;
         cursor: pointer;
         transition: transform 170ms cubic-bezier(.45, .97, .68, 2.48);
     }
@@ -303,8 +356,8 @@
     }
 
     .input-search {
-        width: 200px;
-        height: 25px;
+        width: 400px;
+        height: 35px;
         font-size: 13px;
     }
 
@@ -322,16 +375,42 @@
         margin-bottom: 80px;
     }
 
+    .background-product {
+        height: 220px;
+    }
+
+    .image-product {
+        height: 62%;
+    }
+
     .img-banner {
         width: 75%;
+    }
+
+    .main-subtitle {
+        font-size: 18px;
+    }
+
+    .about {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .value {
+        font-size: 13px;
+        font-weight: 400;
     }
 
     .products {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .background-product {
-        height: 200px;
+    .items-about {
+        top: 15px;
+    }
+
+    .value {
+        margin-top: 8px;
     }
 
 /* Footer */
@@ -341,11 +420,13 @@
     }
 
     .subtitle-footer {
-        font-size: 16px;
+        font-size: 19px;
+        font-weight: 500;
     }
 
     .subtitle-footer.-about {
-        font-size: 12px;
+        font-size: 15px;
+        font-weight: 400;
     }
 
     .footer-about {
@@ -354,7 +435,12 @@
     }
 
     .map-items {
-        font-size: 10px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .map-main {
+        font-weight: 500;
     }
 
     .networks {
@@ -363,29 +449,80 @@
     }
 
     .reminder {
-        font-size: 11px;
+        font-size: 12px;
+        font-weight: 400;
         line-height: 30px;
         text-align: left;
+        margin-top: 15px;
     }
 
 }
 
+@media only screen and (max-width: 690px) {
+
+    .background-product {
+        height: 200px;
+    }
+    
+    .image-product {
+        height: 57%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .background-product {
+        height: 185px;
+    }
+
+    .image-product {
+        height: 57%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .background-product {
+        height: 170px;
+    }
+
+    .image-product {
+        height: 57%;
+    }
+}
+
 @media only screen and (max-width: 540px) {
-/* Header */
+    .main {
+        margin-top: 50px;
+    }
 
     .form-search {
-        width: 180px;
+        width: 80%;
     }
 
     .input-search {
-        width: 170px;
+        width: 100%;
+    }
+
+    .apple-icon {
+        width: 43px;
     }
 
     .menu {
-        width: 18px;
+        width: 28px;
+    }
+/* Main */
+
+    .main-subtitle {
+        font-size: 18px;
     }
 
-/* Main */
+    .about {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .value {
+        font-weight: 400;
+    }
 
     .product-items {
         margin-bottom: 50px;
@@ -396,7 +533,12 @@
     }
 
     .background-product {
-        height: 190px;
+        height: 210px;
+    }
+
+    .image-product {
+        width: 65%;
+        height: 62%;
     }
 
     .img-banner {
@@ -406,11 +548,107 @@
     .banner {
         margin-bottom: 50px;
     }
+
+/* Footer */
+    .subtitle-footer {
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .subtitle-footer.-about {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    .map-items {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .map-main {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .reminder {
+        margin-top: 15px;
+
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .input-search {
+        height: 30px;
+    }
+
+    .apple-icon {
+        width: 36px;
+    }
+
+    .menu {
+        width: 25px;
+    }
+
+    .background-product {
+        height: 200px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
 /* Main */
     .background-product {
+        height: 180px;
+    }
+
+    .image-product {
+        width: 65%;
+        height: 62%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .main {
+        margin-top: 30px;
+    }
+
+    .input-search {
+        width: 200px;
+    }
+
+    /* Main */
+    .background-product {
+        height: 175px;
+    }
+
+    .image-product {
+        width: 64%;
+        height: 62%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /* Main */
+    .background-product {
         height: 160px;
+    }
+
+    .image-product {
+        width: 64%;
+        height: 61%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    /* Main */
+    .background-product {
+        height: 145px;
+    }
+
+    .image-product {
+        width: 64%;
+        height: 62%;
     }
 }

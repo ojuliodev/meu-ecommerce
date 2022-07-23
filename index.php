@@ -15,7 +15,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
 <html lang="pt-BR">
     <head>
         <!-- Title -->
-        <link rel="shortcut icon" href="assets/images/home/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
         <title>E-commerce</title>
 
         <!-- Meta TAGs -->
@@ -32,11 +32,11 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main-header.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main-footer.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/home/response.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/response.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/details/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/edit/style.css">
-        <link rel="stylesheet" href="<?= DIR_CSS ?>/about/style.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/home/about/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/cart/style.css">
 
         <!-- Fonts -->
