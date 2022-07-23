@@ -10,6 +10,12 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
     
         array_push($_SESSION['orders'], $cart);
 
+        if (!isset($_SESSION['amount'])) {
+            $_SESSION['amount'] = [];
+        }
+
+        $_SESSION['amount'] = $cart;
+
         unset($_SESSION['cart']);
 
         header("Location: ?page=customer&action=read");

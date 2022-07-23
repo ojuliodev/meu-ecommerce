@@ -40,7 +40,7 @@ class Customer extends Database{
 
                 $destiny = $this->createFile($_FILES['image'], $id);
 
-                $this->updateByField($destiny, 'photo', $id);
+                $this->updateByField($destiny, 'image', $id);
 
                 return true;
             } else {
@@ -119,6 +119,12 @@ class Customer extends Database{
             $this->stmt->execute();
 
             if ($this->stmt->rowCount()) {
+                $id = $this->conn->lastInsertId();
+
+                $destiny = $this->createFile($_FILES['image'], $id);
+
+                $this->updateByField($destiny, 'image', $id);
+
                 return true;
             } else {
                 return false;
@@ -128,9 +134,28 @@ class Customer extends Database{
         }
     }
 
-    public function update()
+    public function update($data)
     {
+        try {
+            $this->setSql(
+            "UPDATE " . $this->table . "
+                SET name = '{$data['name']}', age = {$data['age']}, email = '{$data['email']}'
+            WHERE
+                customer_id = {$data['customer_id']}
+            ");
 
+            $this->stmt = $this->conn->prepare($this->getSql());
+
+            $this->stmt->execute();
+
+            if ($this->stmt->rowCount()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 
     public function delete()

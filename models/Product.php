@@ -114,6 +114,30 @@ class Product extends Database
             return $e->getMessage();
         }
     }
+
+    public function updateByAmount($data, $id): bool
+    {
+        try {
+            $this->setSql(
+            "UPDATE " . $this->table . "
+                SET amount = $data
+            WHERE
+                product_id = $id
+            ");
+
+            $this->stmt = $this->conn->prepare($this->getSql());
+
+            $this->stmt->execute();
+
+            if ($this->stmt->rowCount()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
     
     public function update(array $data): bool
     {

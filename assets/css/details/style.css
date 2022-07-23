@@ -7,7 +7,7 @@
 
 .main-image, .product-info {
     width: 50%;
-    height: 680px;
+    height: auto;
 }
 
 .main-image {
@@ -136,6 +136,30 @@
 
 .cart-button {
     width: 39px;
+}
+
+.status-description {
+    position: relative;
+    font-weight: 400;
+    font-size: 17px;
+    color: #747474;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 15px;
+}
+
+.status-description::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+
+    background: #696969;
+    border-radius: 6px;
+
+    bottom: 0;
+    left: 0;
 }
 
 .product-description {

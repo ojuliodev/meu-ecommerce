@@ -26,6 +26,8 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
         <!-- CSS -->
         <link rel="stylesheet" href="<?= DIR_CSS ?>/reset.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/color.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main-header.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/main.css">
@@ -33,6 +35,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
         <link rel="stylesheet" href="<?= DIR_CSS ?>/home/response.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/details/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/style.css">
+        <link rel="stylesheet" href="<?= DIR_CSS ?>/customer/edit/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/about/style.css">
         <link rel="stylesheet" href="<?= DIR_CSS ?>/cart/style.css">
 

@@ -34,6 +34,5 @@ if (isset($_GET['search'])) {
 </article>
 
 <?php else: ?>
-    <h2 class="search-title">No results found :(</h2>
-    <h3 class="main-subtitle">Try Searching again.</h3>
+    <h3 class="main-subtitle"><i class="fa-solid fa-triangle-exclamation"></i> A sua pesquisa não retornou resultados</h3>
 <?php endif ?>

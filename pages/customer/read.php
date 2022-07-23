@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/../../models/Customer.php');
+require_once(__DIR__ . '/../../models/Product.php');
 
 $customer = new Customer;
 
@@ -10,7 +11,22 @@ if (isset($_SESSION['customer'])) {
     if (isset($_SESSION['orders'])) {
         $orders = $_SESSION['orders'];
     }
-    
+
+
+    if (isset($_SESSION['amount'])) {
+        $amount = $_SESSION['amount'];
+
+        $product = new Product;
+
+        foreach ($amount as $index) {
+            $replaceAmount = $index['amount'] - $index['quantity'];
+
+            $updateByAmount = $product->updateByAmount($replaceAmount, $index['product_id']);
+        }
+    }
+
+    unset($_SESSION['amount']);
+
     if (isset($_SESSION['msg'])): ?>
 
         <div class="flash-message">
@@ -29,7 +45,7 @@ if (isset($_SESSION['customer'])) {
                 <th class="customer-table-title">Nome</th>
                 <th class="customer-table-title">Email</th>
                 <th class="customer-table-title">Idade</th>
-                <th class="customer-table-title -center">Sair</th>
+                <th class="customer-table-title -center">Conta</th>
             </tr>
         </thead>
         
@@ -37,7 +53,7 @@ if (isset($_SESSION['customer'])) {
             <tr>
                 <td>
                     <div class="customer-name">
-                        <img class="customer-photo" src="assets/images/<?= $user['photo'] ?>" alt="">
+                        <img class="customer-photo" src="assets/images/<?= $user['image'] ?>" alt="">
                         <p><?= $user['name'] ?></p>
                     </div>
                 </td>
