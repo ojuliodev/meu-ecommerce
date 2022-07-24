@@ -1179,7 +1179,11 @@
     .customer-orders p{
         font-size: 14px;
         font-weight: 400;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+    .customer-orders p:nth-child(1) {
+        margin-bottom: 10px;
     }
 
     .customer-button {
@@ -1199,6 +1203,10 @@
     }
 
     .customer-list-name p {
+        width: 170px;
+    }
+
+    .customer-list-name p {
         font-size: 14px;
     }
 
@@ -1210,5 +1218,17 @@
 
     .customer-photo-product {
         width: 45px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .customer-list-name p {
+        width: 120px;
+    }
+
+    .customer-button {
+        width: 75px;
+        height: 35px;
+        font-size: 12px;
     }
 }
