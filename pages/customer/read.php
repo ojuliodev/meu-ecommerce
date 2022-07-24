@@ -43,8 +43,8 @@ if (isset($_SESSION['customer'])) {
         <thead>
             <tr>
                 <th class="customer-table-title">Nome</th>
-                <th class="customer-table-title">Email</th>
-                <th class="customer-table-title">Idade</th>
+                <th class="customer-table-title title-email">Email</th>
+                <th class="customer-table-title title-age">Idade</th>
                 <th class="customer-table-title -center">Conta</th>
             </tr>
         </thead>
@@ -61,7 +61,7 @@ if (isset($_SESSION['customer'])) {
                     <p><?= $user['email'] ?></p>
                 </td>
                 <td class="customer-age"><p><?= $user['age'] ?></p></td>
-                <td>
+                <td class="customer-logout-wrapper">
                     <a class="customer-logout" href="?page=customer&action=logout">Sair</a>
                 </td>
             </tr>
