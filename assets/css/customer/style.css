@@ -235,7 +235,7 @@
     justify-content: left;
     align-items: center;
     width: 400px;
-    margin-left: 20px;
+    gap: 20px;
 }
 
 .customer-button {
@@ -285,4 +285,5 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }

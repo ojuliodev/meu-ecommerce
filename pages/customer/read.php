@@ -77,8 +77,9 @@ if (isset($_SESSION['customer'])) {
                     <?php foreach($products as $product): ?>
 
                         <div class="customer-order">
-                            <img class="customer-photo-product" src="assets/images/<?= $product['banner'] ?>" alt="">
                             <div class="customer-list-name">
+                                <img class="customer-photo-product" src="assets/images/<?= $product['banner'] ?>" alt="">
+
                                 <p><?= $product['quantity'] ?> - <?= $product['name'] ?></p>
                             </div>
                             <a class="customer-button" href="?page=product&slug=<?= $product['slug'] ?>">Ver Produto</a>
