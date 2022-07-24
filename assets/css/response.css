@@ -799,6 +799,10 @@
         margin-bottom: 30px;
     }
 
+    .product-info {
+        width: 90%;
+    }
+
     .title-product {
         font-size: 17px;
         font-weight: 300;
