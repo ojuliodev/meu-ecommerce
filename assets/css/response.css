@@ -1197,13 +1197,17 @@
     }
 }
 
-@media only screen and (max-width:410px) {
+@media only screen and (max-width: 520px) {
+    .customer-button {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:480px) {
     .customer-list-name {
         width: 200px;
-    }
-
-    .customer-list-name p {
-        width: 170px;
     }
 
     .customer-list-name p {
