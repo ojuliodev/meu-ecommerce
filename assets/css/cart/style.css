@@ -17,13 +17,11 @@
 }
 
 .column-remove {
-    display: flex;
-    justify-content: center;
+    text-align: right;
 }
 
 .column-remove a {
     color: red;
-    padding-top: 15px;
 }
 
 .product-column {
