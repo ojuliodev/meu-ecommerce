@@ -1176,10 +1176,13 @@
         font-size: 15px;
     }
 
+    .customer-order {
+        margin-bottom: 15px;
+    }
+
     .customer-orders p{
         font-size: 14px;
         font-weight: 400;
-        margin-bottom: 30px;
     }
 
     .customer-orders p:nth-child(1) {
@@ -1193,7 +1196,7 @@
     }
 
     .customer-list-name {
-        width: 250px;
+        width: 240px;
     }
 }
 
@@ -1226,5 +1229,20 @@
         width: 75px;
         height: 35px;
         font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .ms {
+        width: 300px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ms {
+        width: 230px;
+        font-size: 14px;
     }
 }
