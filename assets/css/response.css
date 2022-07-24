@@ -1177,12 +1177,12 @@
     }
 
     .customer-order {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .customer-orders p{
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .customer-orders p:nth-child(1) {
