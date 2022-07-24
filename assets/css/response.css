@@ -1049,10 +1049,6 @@
     .table-photo {
         width: 37px;
     }
-
-    .main-table {
-        font-size: 14px;
-    }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -1142,10 +1138,6 @@
 }
 
 @media only screen and (max-width: 570px) {
-    .column-first, .column-value {
-        font-size: 12px;
-    }
-
     .cart-button-buy {
         width: 150px;
         height: 40px;
