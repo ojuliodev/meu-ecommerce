@@ -905,11 +905,11 @@
     }
 
     .customer-recover-password {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .customer-create-account {
-        font-size: 17px;
+        font-size: 18px;
     }
 }
 
@@ -960,8 +960,8 @@
     }
 
     .customer-main-button {
-        width: 140px;
-        height: 40px;
+        width: 155px;
+        height: 45px;
         font-size: 14px;
     }
 
