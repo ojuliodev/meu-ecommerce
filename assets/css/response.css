@@ -729,8 +729,8 @@
         padding-top: 70px;
     }
     .main-image {
-        width: 370px;
-        height: 370px;
+        width: 350px;
+        height: 350px;
     }
 
     .image-item {
@@ -748,7 +748,7 @@
 
     .product-status {
         font-size: 16px;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
 
     .description-price {
@@ -877,5 +877,73 @@
             width: 25px;
             margin-bottom: 50px;
         }
+    }
+}
+
+/* Customer */
+
+@media only screen and (max-width: 800px) {
+    .customer-main-title {
+        font-size: 30px;
+    }
+
+    .customer-main-form input {
+        width: 390px;
+        height: 47px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .customer-main-title {
+        font-size: 28px;
+    }
+
+    .customer-main-form input {
+        width: 330px;
+        height: 45px;
+    }
+
+    .customer-recover-password {
+        font-size: 14px;
+    }
+
+    .customer-main-button {
+        width: 145px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .customer-create-account {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .customer-main-title {
+        font-size: 28px;
+    }
+
+    .customer-form-wrapper {
+        width: 100%;
+    }
+
+    .customer-main-form {
+        width: 100%;
+    }
+
+    .customer-main-form input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 43px;
+    }
+
+    .customer-main-button {
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .customer-create-account {
+        font-size: 14px;
     }
 }
