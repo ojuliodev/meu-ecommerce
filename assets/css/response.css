@@ -929,6 +929,8 @@
 
     .customer-main-form {
         width: 100%;
+        box-sizing: border-box;
+        padding: 0 25px;
     }
 
     .customer-main-form input {

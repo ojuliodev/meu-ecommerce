@@ -2,6 +2,10 @@
 
 require_once(__DIR__ . '/../../models/Customer.php');
 
+if (isset($_SESSION['customer'])) {
+    header("Location: ?page=home");
+}
+
 $customer = new Customer;
 
 if (isset($_SESSION['msg'])) { ?>
