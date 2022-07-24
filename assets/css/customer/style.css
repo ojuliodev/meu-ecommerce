@@ -107,7 +107,6 @@
     margin-bottom: -30px;
 
     animation: message 0.4s forwards;
-    animation-delay: 3s;
 }
 
 @keyframes message {
@@ -116,7 +115,7 @@
     }
 
     100% {
-        opacity: 0;
+        opacity: 1;
     }
 }
 

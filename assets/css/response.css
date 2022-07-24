@@ -1238,6 +1238,10 @@
         margin-top: 20px;
         font-size: 15px;
     }
+
+    .flash-message {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 500px) {
