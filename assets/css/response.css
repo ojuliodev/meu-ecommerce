@@ -534,7 +534,7 @@
 
     .about {
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .value {
@@ -574,13 +574,13 @@
 
     .subtitle-footer.-about {
         font-size: 15px;
-        font-weight: 400;
+        font-weight: 300;
         margin-bottom: 30px;
     }
 
     .map-items {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .map-main {
@@ -592,7 +592,7 @@
         margin-top: 15px;
 
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 300;
     }
 }
 
