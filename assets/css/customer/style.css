@@ -138,7 +138,7 @@
     width: 80%;
     margin: 0 auto;
 }
-.customer-main-table {
+.main-table {
     width: 100%;
     margin: 0 auto;
 
@@ -149,7 +149,7 @@
     color: #292929;
 }
 
-.customer-table-title {
+.table-title {
     text-align: left;
     width: 33.333%;
     font-size: 20px;
@@ -157,24 +157,21 @@
     padding-bottom: 15px;
 }
 
-.customer-table-title.-center {
+.table-four {
     text-align: center;
 }
 
-.customer-photo {
+.table-title.-center {
+    text-align: center;
+}
+
+.table-photo {
     width: 50px;
     border-radius: 20%;
     cursor: pointer;
 }
 
-.customer-input-image {
-    position: absolute;
-    opacity: 0;
-    width: 50px;
-    height: 50px;
-}
-
-.customer-name {
+.column-name-wrapper {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -182,24 +179,22 @@
     gap: 15px;
 }
 
-.customer-email {
-    position: relative;
-    top: 0;
-    text-align: left;
+.column-button {
+    display: flex;
+    justify-content: center;
 }
 
-.customer-age {
-    text-align: left;
-    font-size: 20px;
+.table-button {
+    text-align: center;
 }
 
-.customer-logout {
+.column-button a {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 140px;
-    height: 40px;
+    width: 70px;
+    height: 43px;
     cursor: pointer;
 
     background: #fe4343;
@@ -213,7 +208,7 @@
     transition: transform 150ms cubic-bezier(.45,.97,.68,2.48);
 }
 
-.customer-logout:hover {
+.column-button a:hover {
     transform: scale(1.03);
 }
 

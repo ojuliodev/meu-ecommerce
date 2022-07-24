@@ -854,7 +854,6 @@
     }
 
     .card-image {
-        width: 25px;
         margin-bottom: 50px;
     }
 }
@@ -882,7 +881,6 @@
         }
     
         .card-image {
-            width: 25px;
             margin-bottom: 50px;
         }
     }
@@ -974,19 +972,20 @@
     .customer-read-container {
         width: 95%;
     }
-    .customer-table-title {
+    .table-title {
         font-size: 18px;
     }
 
-    .customer-age {
-        font-size: 18px;
+    .column-button {
+        justify-content: right;
     }
 
-    .customer-logout {
-        font-size: 15px;
+    .column-button a {
+        width: 55px;
+        height: 39px;
     }
 
-    .customer-main-table {
+    .main-table {
         font-size: 16px;
     }
 }
@@ -995,84 +994,169 @@
     .customer-read-container {
         width: 97%;
     }
-    .customer-table-title {
-        font-size: 16px;
-    }
 
-    .title-age {
-        display: none;
-    }
-
-    .customer-age {
-        font-size: 16px;
-        display: none;
-    }
-
-    .title-email {
-        text-align: center;
-    }
-
-    .customer-email {
-        text-align: center;
-    }
-
-    .customer-table-title.-center {
+    .table-four {
         text-align: right;
-    }
-
-    .customer-logout {
-        font-size: 15px;
-        width: 125px;
+        padding-right: 5px;
     }
     
-    .customer-logout-wrapper {
-        display: flex;
-        justify-content: right;
+    .table-title {
+        font-size: 16px;
     }
 
-    .customer-main-table {
+    .table-third, .column-third {
+        display: none;
+    }
+
+    .table-second {
+        text-align: center;
+    }
+
+    .column-second {
+        text-align: center;
+    }
+
+    .main-table {
         font-size: 15px;
     }
 }
 
 @media only screen and (max-width: 580px) {
-    .customer-logout {
+    .column-button, .table-four {
         display: none;
     }
 
-    .customer-table-title {
+    .table-title {
         width: 50%;
         font-size: 16px;
     }
 
-    .title-email {
+    .table-second {
         text-align: right;
     }
 
-    .customer-email {
+    .column-secod {
         text-align: right;
     }
 
-    .customer-photo {
+    .table-photo {
         width: 40px;
-    }
-
-    .customer-table-title.-center {
-        display: none;
     }
 }
 
 @media only screen and (max-width: 400px) {
 
-    .customer-photo {
+    .table-photo {
         width: 37px;
     }
 
-    .customer-table-title.-center {
+    .main-table {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .column-remove a{
+        padding-top: 0;
+    }
+
+    .product-title {
+        width: 25%;
+        text-align: center;
+    }
+
+    .product-column {
+        text-align: center;
+    }
+
+    .table-first {
+        text-align: left;
+    }
+
+    .table-remove {
+        text-align: right;
+    }
+
+    .column-remove {
+        justify-content: right;
+    }
+
+    .column-product-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-table .table-column {
+        padding-bottom: 20px;
+    }
+
+    .column-first {
+        font-size: 15px;
+    }
+
+    .column-third {
+        font-size: 15px;
+    }
+
+    .product-photo {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .button-quantity {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .column-quantity {
         display: none;
     }
 
-    .customer-main-table {
+    .cart-button-buy {
+        width: 200px;
+    }
+
+    .table-quantity {
+        display: none;
+    }
+
+    .column-remove {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .column-first, .column-value {
         font-size: 14px;
+    }
+
+    .product-title {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .column-first, .column-value {
+        font-size: 12px;
+    }
+
+    .cart-button-buy {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .column-first {
+        text-align: left;
+    }
+
+    .product-title {
+        font-size: 15px;
     }
 }

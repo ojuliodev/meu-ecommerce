@@ -27,31 +27,34 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
 <main class="cart-container">
     <?php if (isset($cart) && !empty($cart)): ?>
 
-    <table class="cart-main-table">
+    <table class="main-table">
         <thead>
             <tr>
-                <th class="cart-title-table">Produto</th>
-                <th class="cart-title-table">Quantidade</th>
-                <th class="cart-title-table">Valor</th>
+                <th class="table-title product-title table-first">Produto</th>
+                <th class="table-title product-title table-quantity">Quantidade</th>
+                <th class="table-title product-title table-value">Valor</th>
+                <th class="table-title product-title table-remove">Remover</th>
             </tr>
         </thead>
-
+        
         <tbody>
             <?php foreach($cart as $product): ?>
-                <tr class="cart-wrapper">
-                    <td class="cart-name">
-                        <div>
-                            <img class="cart-image" src="assets/images/<?= $product['banner']?>" alt="">
-                        </div>
-                        <?= $product['name'] ?>
-                    </td>
-                    <td class="cart-description">
-                        <div class="cart-description-wrapper">
-                            <?= $product['quantity'] ?>
-                        </div>
-                    </td>
-                    <td>R$ <?= $product['special_price'] * $product['quantity'] ?></td>
-                </tr>
+                <tr>
+                <td class="table-column product-column">
+                    <div class="column-product-wrapper">
+                        <img class="table-photo product-photo" src="assets/images/<?= $product['banner'] ?>" alt="">
+                        <p class="column-first"><?= $product['name'] ?></p>
+                    </div>
+                </td>
+                <td class="table-column product-column column-quantity">
+                    <p><?= $product['quantity'] ?></p>
+                </td>
+                <td class="table-column product-column column-value"><p>R$ <?= $product['special_price'] * $product['quantity'] ?></p></td>
+                <td class="table-column product-column column-remove">
+                    <p class="button-quantity"><?= $product['quantity'] ?></p>
+                    <a href="?page=customer&action=logout"><i class="fa-solid fa-trash fa-lg"></i></a>
+                </td>
+            </tr>
             <?php endforeach ?>
         </tbody>
     </table>

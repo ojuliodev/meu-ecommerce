@@ -39,30 +39,30 @@ if (isset($_SESSION['customer'])) {
 ?>
 
 <main class="customer-read-container">
-    <table class="customer-main-table">
+    <table class="main-table">
         <thead>
             <tr>
-                <th class="customer-table-title">Nome</th>
-                <th class="customer-table-title title-email">Email</th>
-                <th class="customer-table-title title-age">Idade</th>
-                <th class="customer-table-title -center">Conta</th>
+                <th class="table-title">Nome</th>
+                <th class="table-title table-second">Email</th>
+                <th class="table-title table-third">Idade</th>
+                <th class="table-title table-four">Sair</th>
             </tr>
         </thead>
         
         <tbody>
             <tr>
-                <td>
-                    <div class="customer-name">
-                        <img class="customer-photo" src="assets/images/<?= $user['image'] ?>" alt="">
+                <td class="table-column">
+                    <div class="column-name-wrapper">
+                        <img class="table-photo" src="assets/images/<?= $user['image'] ?>" alt="">
                         <p><?= $user['name'] ?></p>
                     </div>
                 </td>
-                <td class="customer-email">
+                <td class="table-column column-second">
                     <p><?= $user['email'] ?></p>
                 </td>
-                <td class="customer-age"><p><?= $user['age'] ?></p></td>
-                <td class="customer-logout-wrapper">
-                    <a class="customer-logout" href="?page=customer&action=logout">Sair</a>
+                <td class="table-column column-third"><p><?= $user['age'] ?></p></td>
+                <td class="table-column column-button">
+                    <a href="?page=customer&action=logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                 </td>
             </tr>
         </tbody>
