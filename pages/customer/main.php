@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     $customer = $customer->login($_POST);
 
     if ($customer) {
-        header("Location: ?page=customer&action=read&user=" . $customer['customer_id'] . "");
+        header("Location: ?page=customer&action=read");
 
         $_SESSION['customer'] = $customer;
 

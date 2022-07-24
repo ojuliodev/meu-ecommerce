@@ -899,6 +899,11 @@
         width: 390px;
         height: 47px;
     }
+
+    .customer-recover-password, .customer-create-account {
+        text-decoration: none;
+        font-weight: 400;
+    }
 }
 
 @media only screen and (max-width: 540px) {
