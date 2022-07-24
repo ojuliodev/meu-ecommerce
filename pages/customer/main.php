@@ -44,9 +44,9 @@ if (isset($_POST['submit'])) {
     <div class="customer-form-wrapper">
         <form action="?page=customer" class="customer-main-form" method="POST">
             <div class="customer-input-wrapper">
-                <input type="email" name="email" placeholder="E-mail">
+                <input type="email" name="email" placeholder="E-mail" required>
 
-                <input type="password" name="password" placeholder="Senha">
+                <input type="password" name="password" placeholder="Senha" required>
             </div>
 
             <a href="" class="customer-recover-password">Esqueceu a senha?</a>

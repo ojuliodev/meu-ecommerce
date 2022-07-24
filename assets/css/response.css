@@ -1124,6 +1124,8 @@
     .cart-create-account {
         margin-bottom: 50px;
         text-decoration: none;
+        font-weight: 300;
+        font-size: 15px;
     }
 }
 
@@ -1158,6 +1160,7 @@
         width: 200px;
         font-size: 19px;
         margin-top: 100px;
+        font-weight: 500;
     }
     .customer-list-products {
         width: 90%;
@@ -1170,11 +1173,13 @@
 
 @media only screen and (max-width: 580px) {
     .customer-orders p:nth-child(1) {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .customer-orders p{
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 20px;
     }
 
     .customer-button {
