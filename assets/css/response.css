@@ -511,6 +511,10 @@
 }
 
 @media only screen and (max-width: 540px) {
+    #container {
+        padding: 0 30px;
+    }
+
     .form-search {
         width: 65%;
     }
@@ -597,6 +601,10 @@
 }
 
 @media only screen and (max-width: 480px) {
+    #container {
+        padding: 0 20px;
+    }
+
     .input-search {
         font-size: 12px
     }
@@ -804,7 +812,7 @@
     }
 
     .title-product {
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 300;
         margin-bottom: 24px;
     }
@@ -1001,7 +1009,7 @@
     }
 
     .customer-logout {
-        font-size: 14px;
+        font-size: 15px;
         width: 125px;
     }
     
@@ -1011,7 +1019,7 @@
     }
 
     .customer-main-table {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -1022,7 +1030,7 @@
 
     .customer-table-title {
         width: 50%;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .title-email {
