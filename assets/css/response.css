@@ -902,7 +902,14 @@
 
     .customer-recover-password, .customer-create-account {
         text-decoration: none;
-        font-weight: 400;
+    }
+
+    .customer-recover-password {
+        font-size: 16px;
+    }
+
+    .customer-create-account {
+        font-size: 17px;
     }
 }
 
