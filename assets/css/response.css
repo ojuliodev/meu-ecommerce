@@ -410,12 +410,12 @@
 
     .about {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .value {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .products {
@@ -443,7 +443,7 @@
 
     .subtitle-footer.-about {
         font-size: 15px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .footer-about {
@@ -453,7 +453,7 @@
 
     .map-items {
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .map-main {
@@ -467,7 +467,7 @@
 
     .reminder {
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 30px;
         text-align: left;
         margin-top: 15px;
@@ -538,7 +538,7 @@
     }
 
     .value {
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .product-items {
@@ -726,7 +726,7 @@
     .container-detail {
         flex-direction: column;
         align-items: center;
-        padding-top: 55px;
+        padding-top: 70px;
     }
     .main-image {
         width: 370px;
@@ -765,8 +765,8 @@
 
     .button-cart {
         width: 240px;
-        height: 70px;
-        font-size: 16px;
+        height: 65px;
+        font-size: 15px;
 
         margin-bottom: 35px;
     }
@@ -796,14 +796,18 @@
     .main-image {
         width: 280px;
         height: 280px;
+        margin-bottom: 30px;
     }
 
     .title-product {
         font-size: 17px;
+        font-weight: 300;
+        margin-bottom: 24px;
     }
 
     .product-status {
         font-size: 14px;
+        padding-bottom: 25px;
     }
 
     .description-price {
@@ -818,10 +822,15 @@
         font-size: 25px;
     }
 
+    .main-price {
+        margin-bottom: 35px;
+    }
+
     .button-cart {
         width: 200px;
-        height: 60px;
-        font-size: 11px;
+        height: 65px;
+        font-size: 12px;
+        margin-bottom: 25px;
     }
 
     .status-description {
