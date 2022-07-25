@@ -1,3 +1,4 @@
 config/config.php
 config/environment.php
 assets/images/products/**
+assets/images/customer/**
