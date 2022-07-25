@@ -18,7 +18,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
     <head>
         <!-- Title -->
         <link rel="shortcut icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
-        <title>ecommerce</title>
+        <title>Ecommerce</title>
 
         <!-- Meta TAGs -->
         <meta charset="UTF-8">
