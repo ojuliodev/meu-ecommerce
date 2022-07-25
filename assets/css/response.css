@@ -525,6 +525,7 @@
 
     .items-menu {
         font-size: 16px !important;
+        font-weight: 400;
     }
 
     .form-search {

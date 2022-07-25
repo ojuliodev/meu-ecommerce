@@ -93,6 +93,7 @@
     padding: 23px 23px;
     animation: burguer 0.3s;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 	10px 0 0 10px;
 }
 
 @keyframes burguer {
@@ -107,7 +108,7 @@
 
 .items-menu {
     font-size: 17px !important;
-    line-height: 30px;
+    line-height: 40px;
     text-align: right;
 }
 
