@@ -1059,6 +1059,10 @@
         width: 115px;
         font-size: 14px;
     }
+
+    .column-email {
+        word-break: break-word;
+    }
 }
 
 @media only screen and (max-width: 400px) {
