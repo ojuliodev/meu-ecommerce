@@ -252,7 +252,7 @@
 
     .image-product {
         width: 67%;
-        height: 60%;
+        max-height: 165px;
     }
 }
 
