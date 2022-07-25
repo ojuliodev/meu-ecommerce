@@ -56,12 +56,12 @@ if (isset($_POST['submit'])) {
 
         <div class="form-group">
             <label for="author">Valor</label>
-            <input type="number" class="form-control" id="price" name="price" placeholder="Digite o Valor" required value="<?= $data['price'] ?>">
+            <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Digite o Valor" required value="<?= $data['price'] ?>">
         </div>
 
         <div class="form-group">
             <label for="author">Desconto</label>
-            <input type="number" class="form-control" id="special_price" name="special_price" placeholder="Digite o Desconto" required value="<?= $data['special_price'] ?>">
+            <input type="number" step="0.01" class="form-control" id="special_price" name="special_price" placeholder="Digite o Desconto" required value="<?= $data['special_price'] ?>">
         </div>
 
         <div class="form-group">
