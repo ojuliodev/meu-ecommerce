@@ -897,7 +897,7 @@
         font-size: 30px;
     }
 
-    .customer-main-form input {
+    .customer-main-form input, .customer-form-wrapper label {
         width: 390px;
         height: 47px;
     }
@@ -920,7 +920,11 @@
         font-size: 28px;
     }
 
-    .customer-main-form input {
+    .customer-form-wrapper label p {
+        font-size: 13px;
+    }
+
+    .customer-main-form input, .customer-form-wrapper label {
         width: 330px;
         height: 45px;
     }
@@ -949,13 +953,13 @@
         width: 100%;
     }
 
-    .customer-main-form {
+    .customer-main-form, .customer-form-wrapper label {
         width: 100%;
         box-sizing: border-box;
         padding: 0 15px;
     }
 
-    .customer-main-form input {
+    .customer-main-form input, .customer-form-wrapper label {
         box-sizing: border-box;
         width: 100%;
         height: 43px;

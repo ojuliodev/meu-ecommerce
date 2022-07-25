@@ -56,7 +56,8 @@ if (isset($_POST['submit'])) {
                 <input type="email" name="email" placeholder="E-mail" required>
 
                 <div class="mb-3 customer-image" style="margin: 0 !important;">
-                    <input class="form-control" type="file" id="formFile" name="image" required>
+                    <label for="formFile"><p>Foto de Perfil</p></label>
+                    <input class="form-control" type="file" accept="image/png, image/gif, image/jpeg, image/jpg, image/webp" id="formFile" name="image" required>
                 </div>
 
                 <input type="number" min="1" max="99" name="age" placeholder="Idade" required>
