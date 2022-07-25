@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <h2 class="subtitle-footer">ecommerce Aqui</h2>
+    <h2 class="subtitle-footer">Ecommerce Aqui</h2>
 
     <h3 class="subtitle-footer -about">Seu e-commerce preferido</h3>
 

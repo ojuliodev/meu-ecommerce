@@ -39,7 +39,11 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
         
         <tbody>
             <?php foreach($cart as $product): ?>
-                <tr>
+
+            <?php {
+                if (isset($_GET['product']))
+                $product['quantity'] = $product['quantity'] - 1; }?>
+            <tr>
                 <td class="table-column product-column">
                     <div class="column-product-wrapper">
                         <img class="table-photo product-photo" src="assets/images/<?= $product['banner'] ?>" alt="">
@@ -52,7 +56,7 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
                 <td class="table-column product-column column-value"><p>R$ <?= $product['special_price'] * $product['quantity'] ?></p></td>
                 <td class="table-column product-column column-remove">
                     <p class="button-quantity"><?= $product['quantity'] ?></p>
-                    <a href="?page=customer&action=logout"><i class="fa-solid fa-trash fa-lg"></i></a>
+                    <a href="index.php?page=cart&product=remove"><i class="fa-solid fa-trash fa-lg"></i></a>
                 </td>
             </tr>
             <?php endforeach ?>

@@ -10,6 +10,7 @@
     position: relative;
     bottom: 5px;
     cursor: pointer;
+    image-rendering: pixelated;
 }
 
 .main-items {

@@ -5,6 +5,10 @@ require_once(__DIR__ . '/../../models/Product.php');
 
 $customer = new Customer;
 
+if (!isset($_SESSION['customer'])) {
+    header("Location: ?page=home");
+}
+
 if (isset($_SESSION['customer'])) {
     $user = $_SESSION['customer'];
 
@@ -54,11 +58,11 @@ if (isset($_SESSION['customer'])) {
                 <td class="table-column">
                     <div class="column-name-wrapper">
                         <img class="table-photo" src="assets/images/<?= $user['image'] ?>" alt="">
-                        <p><?= $user['name'] ?></p>
+                        <p class="column-name"><?= $user['name'] ?></p>
                     </div>
                 </td>
                 <td class="table-column column-second">
-                    <p><?= $user['email'] ?></p>
+                    <p class="column-email"><?= $user['email'] ?></p>
                 </td>
                 <td class="table-column column-third"><p><?= $user['age'] ?></p></td>
                 <td class="table-column column-button">
