@@ -69,6 +69,10 @@
     align-items: center;
 }
 
+.main-menu-burguer {
+    display: none;
+}
+
 #menu-burguer {
     display: none;
 }
@@ -104,6 +108,12 @@
     100% {
         right: 0;
     }
+}
+
+.category-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .items-menu {

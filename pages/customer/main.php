@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 
         $_SESSION['msg'] = "Login efetuado com sucesso!";
 
-        echo '<script>window.location="?page=customer&action=read"</script>';
+        header("Location: ?page=customer&action=read");
     } else {
         if (isset($_POST['submit'])) {
         $_SESSION['msg'] = "Email ou Senha inválidos!";?>

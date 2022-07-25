@@ -31,7 +31,7 @@ if (isset($_GET['search'])) {
                     <figcaption class="about"><?= $product['name'] ?></figcaption>
                 </a>
 
-                <figcaption class="value">R$ <?= $product['price'] ?></figcaption>
+                <figcaption class="value">R$ <?= str_replace('.', ',', $product['price']) ?></figcaption>
             </div>
         </figure>
     <?php } ?>

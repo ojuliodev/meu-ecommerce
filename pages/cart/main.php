@@ -67,7 +67,7 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
                 <td class="table-column product-column column-quantity">
                     <p><?= $product['quantity'] ?></p>
                 </td>
-                <td class="table-column product-column column-value"><p>R$ <?= $product['special_price'] * $product['quantity'] ?></p></td>
+                <td class="table-column product-column column-value"><p>R$ <?= str_replace('.', ',', $product['special_price'] * $product['quantity']) ?></p></td>
                 <td class="table-column product-column column-remove">
                     <p class="button-quantity"><?= $product['quantity'] ?></p>
                     <a href="index.php?page=cart&remove=<?= $product['product_id'] ?>"><i class="fa-solid fa-trash fa-lg"></i></a>
