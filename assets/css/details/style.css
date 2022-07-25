@@ -24,7 +24,7 @@
 
 .image-item {
     width: 546px;
-    height: 546px;
+    max-height: 800px;
 }
 
 .title-product {
