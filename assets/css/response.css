@@ -71,7 +71,7 @@
 
     .image-product {
         width: 70%;
-        height: 220px;
+        max-height: 220px;
     }
 
     .about {
@@ -405,7 +405,7 @@
     }
 
     .image-product {
-        height: 160px;
+        max-height: 160px;
     }
 
     .img-banner {
@@ -494,7 +494,7 @@
     }
     
     .image-product {
-        height: 140px;
+        max-height: 140px;
     }
 }
 
@@ -508,7 +508,7 @@
     }
 
     .image-product {
-        height: 125px;
+        max-height: 125px;
     }
 }
 
@@ -518,7 +518,7 @@
     }
 
     .image-product {
-        height: 110px;
+        max-height: 110px;
     }
 }
 
@@ -580,7 +580,7 @@
 
     .image-product {
         width: 65%;
-        height: 140px;
+        max-height: 140px;
     }
 
     .img-banner {
