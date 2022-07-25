@@ -388,6 +388,10 @@
         margin-top: 30px;
     }
 
+    .product-items {
+        margin-bottom: 60px;
+    }
+
     .banner {
         margin-bottom: 40px;
     }
@@ -563,7 +567,7 @@
     }
 
     .img-banner {
-        width: 80%;
+        width: 90%;
     }
 
     .banner {

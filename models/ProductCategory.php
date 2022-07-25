@@ -40,7 +40,7 @@ class ProductCategory extends Database implements ProductCategoryInterface
             pc.name category, po.* from
                 {$this->table} pc 
             INNER JOIN product po on po.category_id = pc.category_id
-            WHERE pc.category_id = $id");
+            WHERE pc.category_id = $id LIMIT 8");
 
             $this->stmt = $this->conn->prepare($this->getSql());
 

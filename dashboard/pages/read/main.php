@@ -39,7 +39,11 @@ if (isset($_SESSION['msg'])) { ?>
             <td><?php echo $value['product_id']?></td>
             <td><?php echo $value['category_id'] ?></td>
             <td><?php echo $value['name'] ?></td>
-            <td><?php echo $value['description'] ?></td>
+            <td>
+                <?php echo strlen($value['description']) > 100 
+                ? substr($value['description'], 0, 100) . '...' 
+                : $value['description'] ?>
+            </td>
             <td><?php echo $value['price'] ?></td>
             <td><?php echo $value['special_price'] ?></td>
             <td><?php echo $value['amount'] ?></td>

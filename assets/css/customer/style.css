@@ -287,3 +287,12 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.column-email {
+    word-break: break-all;
+}
+
+.column-second, .table-second {
+    padding-right: 30px;
+    padding-left: 10px;
+}

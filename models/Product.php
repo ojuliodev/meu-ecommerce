@@ -152,6 +152,8 @@ class Product extends Database
             $this->stmt = $this->conn->prepare($this->getSql());
 
             if (isset($_FILES['image']) && !empty($_FILES['image']['tmp_name'])) {
+                $this->deleteFile($data['product_id']);
+
                 $id = $data['product_id'];
 
                 $destiny = $this->createFile($_FILES['image'], $id);
@@ -191,6 +193,13 @@ class Product extends Database
         } catch (PDOException $e) {
             return $e->getMessage();
         }
+    }
+
+    private function deleteFile($id) {
+        $data = $this->readById($id);
+        $destiny = __DIR__ . '/../assets/images/' . $data['banner'] . '';
+
+        if (file_exists($destiny)) unlink($destiny);
     }
 
     public function delete(int $id): bool

@@ -20,6 +20,21 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
 
         header("Location: ?page=customer&action=read");
     }
+
+    if (isset($_GET['remove'])) {
+        $productId = $_GET['remove'];
+
+        $index = array_search($productId, array_column($_SESSION['cart'], 'product_id'));
+
+        if ($_SESSION['cart'][$index]['quantity'] > 1) {
+            $_SESSION['cart'][$index]['quantity'] = $_SESSION['cart'][$index]['quantity'] - 1;
+
+        } else {
+            unset($_SESSION['cart'][$index]);
+        }
+        
+        header("Location: ?page=cart");
+    }
 }
 
 ?>
@@ -39,10 +54,6 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
         
         <tbody>
             <?php foreach($cart as $product): ?>
-
-            <?php {
-                if (isset($_GET['product']))
-                $product['quantity'] = $product['quantity'] - 1; }?>
             <tr>
                 <td class="table-column product-column">
                     <div class="column-product-wrapper">
@@ -56,7 +67,7 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
                 <td class="table-column product-column column-value"><p>R$ <?= $product['special_price'] * $product['quantity'] ?></p></td>
                 <td class="table-column product-column column-remove">
                     <p class="button-quantity"><?= $product['quantity'] ?></p>
-                    <a href="index.php?page=cart&product=remove"><i class="fa-solid fa-trash fa-lg"></i></a>
+                    <a href="index.php?page=cart&remove=<?= $product['product_id'] ?>"><i class="fa-solid fa-trash fa-lg"></i></a>
                 </td>
             </tr>
             <?php endforeach ?>
