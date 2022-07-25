@@ -68,3 +68,58 @@
 
     align-items: center;
 }
+
+#menu-burguer {
+    display: none;
+}
+
+#menu-burguer:checked + .menu-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-items {
+    box-sizing: border-box;
+    width: 250px;
+    height: 100vh;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: #fff;
+    display: none;
+    padding: 23px 23px;
+    animation: burguer 0.3s;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes burguer {
+    0% {
+        right: -50vh;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+.items-menu {
+    font-size: 17px !important;
+    line-height: 30px;
+    text-align: right;
+}
+
+.close-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.menu-title {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}

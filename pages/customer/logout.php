@@ -4,4 +4,6 @@ unset($_SESSION['customer']);
 
 unset($_SESSION['cart']);
 
-header("Location: ?page=customer");
+?>
+
+<script>window.location="?page=customer"</script>

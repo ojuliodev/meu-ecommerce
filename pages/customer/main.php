@@ -20,11 +20,11 @@ if (isset($_POST['submit'])) {
     $customer = $customer->login($_POST);
 
     if ($customer) {
-        header("Location: ?page=customer&action=read");
-
         $_SESSION['customer'] = $customer;
 
         $_SESSION['msg'] = "Login efetuado com sucesso!";
+
+        echo '<script>window.location="?page=customer&action=read"</script>';
     } else {
         if (isset($_POST['submit'])) {
         $_SESSION['msg'] = "Email ou Senha inválidos!";?>

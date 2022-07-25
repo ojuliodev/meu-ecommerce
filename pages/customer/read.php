@@ -55,7 +55,7 @@ if (isset($_SESSION['customer'])) {
         
         <tbody>
             <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $user['image']) 
-                ? DIR_IMG . '/' . $product['banner'] 
+                ? DIR_IMG . '/' . $user['image'] 
                 : DIR_IMG . '/products/placeholder.png';?>
             <tr>
                 <td class="table-column">
