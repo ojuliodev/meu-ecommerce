@@ -15,9 +15,9 @@ if (isset($_GET['search'])) {
 
 <article class="products">
     <?php foreach ($search as $product) { ?>
-        <?php $image = file_exists(DIR_IMG . '/' . $product['banner']) 
+        <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
             ? DIR_IMG . '/' . $product['banner'] 
-            : DIR_IMG . '/products/placeholder.png'; ?>
+            : DIR_IMG . '/products/placeholder.png';?>
 
         <figure class="product-items">
         <a href="?page=product&slug=<?= $product['slug'] ?>">

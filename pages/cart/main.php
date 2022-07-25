@@ -54,10 +54,13 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
         
         <tbody>
             <?php foreach($cart as $product): ?>
+                <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
+                    ? DIR_IMG . '/' . $product['banner'] 
+                    : DIR_IMG . '/products/placeholder.png';?>
             <tr>
                 <td class="table-column product-column">
                     <div class="column-product-wrapper">
-                        <img class="table-photo product-photo" src="assets/images/<?= $product['banner'] ?>" alt="">
+                        <img class="table-photo product-photo" src="<?= $image ?>" alt="">
                         <p class="column-first"><?= $product['name'] ?></p>
                     </div>
                 </td>

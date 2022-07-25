@@ -54,15 +54,28 @@ if (isset($_SESSION['customer'])) {
         </thead>
         
         <tbody>
+            <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $user['image']) 
+                ? DIR_IMG . '/' . $product['banner'] 
+                : DIR_IMG . '/products/placeholder.png';?>
             <tr>
                 <td class="table-column">
                     <div class="column-name-wrapper">
-                        <img class="table-photo" src="assets/images/<?= $user['image'] ?>" alt="">
-                        <p class="column-name"><?= $user['name'] ?></p>
+                        <img class="table-photo" src="<?= $image ?>" alt="">
+                        <p class="column-name">
+                            <?php
+                                echo strlen($user['name']) > 20 
+                                    ? substr($user['name'], 0, 20) . '...' 
+                                    : $user['name']?>
+                        </p>
                     </div>
                 </td>
                 <td class="table-column column-second">
-                    <p class="column-email"><?= $user['email'] ?></p>
+                    <p class="column-email">
+                        <?php
+                            echo strlen($user['email']) > 25 
+                                ? substr($user['email'], 0, 25) . '...' 
+                                : $user['email']?>
+                    </p>
                 </td>
                 <td class="table-column column-third"><p><?= $user['age'] ?></p></td>
                 <td class="table-column column-button">
@@ -79,10 +92,13 @@ if (isset($_SESSION['customer'])) {
                 <li class="customer-orders">
                     <p><?= "Pedido $index" ?></p>
                     <?php foreach($products as $product): ?>
+                        <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $user['image']) 
+                            ? DIR_IMG . '/' . $product['banner'] 
+                            : DIR_IMG . '/products/placeholder.png';?>
 
                         <div class="customer-order">
                             <div class="customer-list-name">
-                                <img class="customer-photo-product" src="assets/images/<?= $product['banner'] ?>" alt="">
+                                <img class="customer-photo-product" src="<?= $image ?>" alt="">
 
                                 <p><?= $product['quantity'] ?> - <?= $product['name'] ?></p>
                             </div>
