@@ -115,6 +115,24 @@ class Product extends Database
         }
     }
 
+    public function readByNews($data)
+    {
+        try {
+            $this->setSql("SELECT * FROM " . $this->table . " order by $data DESC limit 4");
+
+            $this->stmt = $this->conn->prepare($this->getSql());
+
+            if ($this->stmt->execute()) {
+                return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
+
     public function updateByAmount($data, $id): bool
     {
         try {
@@ -161,7 +179,7 @@ class Product extends Database
     
                     $this->updateByField($destiny, 'banner', $id);
                 }
-                
+
                 return true;
             } else {
                 return false;
