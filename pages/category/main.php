@@ -28,7 +28,7 @@ $category = $productCategory->readBySlug($_GET['slug']);
                     <figcaption class="about"><?= $product['name'] ?></figcaption>
                 </a>
 
-                <figcaption class="value">R$ <?= str_replace('.', ',', $product['price']) ?></figcaption>
+                <figcaption class="value">R$ <?= number_format($product['special_price'], 2, ',', '.') ?></figcaption>
             </div>
         </figure>
     <?php } ?>

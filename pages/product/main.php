@@ -60,9 +60,9 @@ if (isset($_GET['insert']) && isset($_SESSION['customer']) && $product['amount']
                 <p class="description-price">à vista</p>
 
                 <div class="main-price">
-                    <h3 class="special-price">R$ <?=str_replace('.', ',', $product['special_price']) ?></h3>
+                    <h3 class="special-price">R$ <?= number_format($product['special_price'], 2, ',', '.') ?></h3>
 
-                    <h4 class="price">R$ <?= str_replace('.', ',', $product['price']) ?></h4>
+                    <h4 class="price">R$ <?= number_format($product['price'], 2, ',', '.') ?></h4>
                 </div>
 
                 <a class="button-cart" href="<?= isset($_SESSION['customer']) ? '?page=product&slug=' . $product['slug']. '&insert=cart' : '?page=customer' ?>"> ADICIONAR AO CARRINHO</a>
