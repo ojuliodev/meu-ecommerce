@@ -15,8 +15,8 @@ $products = new Product;
 
     <section class="main-products">
         <h2 class="main-subtitle">Novidades</h2>
-        <?php foreach ($products->readByNews() as $product) { ?>
-            <article class="products">
+        <article class="products">
+            <?php foreach ($products->readByNews() as $product) { ?>
                     <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
                         ? DIR_IMG . '/' . $product['banner'] 
                         : DIR_IMG . '/products/placeholder.png';?>
@@ -36,8 +36,8 @@ $products = new Product;
                             <figcaption class="value">R$ <?= str_replace('.', ',', $product['special_price']) ?></figcaption>
                         </div>
                     </figure>
-                <?php } ?>
-            </article>
+            <?php } ?>
+        </article>
     </section>
 
     <section class="main-products">
