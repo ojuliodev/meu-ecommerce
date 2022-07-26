@@ -45,7 +45,10 @@ $products = new Product;
             <?php $products = $productCategory->readByCategory($category['category_id'])?>
 
             <?php if (count($products)): ?>
-                <h2 class="main-subtitle"><?=  $category['name']; ?></h2>
+                <div class="products-title-wrapper">
+                    <h2 class="main-subtitle"><?= $category['name'] ?></h2>
+                    <a class="all-products" href="?page=category&slug=<?= $category['slug'] ?>">Ver todos</a>
+                </div>
 
                 <article class="products">
                     <?php foreach ($products as $product) { ?>

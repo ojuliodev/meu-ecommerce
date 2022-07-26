@@ -99,3 +99,13 @@
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+.products-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-products {
+    color: #121212;
+    text-decoration: underline;
+}
