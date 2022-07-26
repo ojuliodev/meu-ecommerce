@@ -17,25 +17,25 @@ $products = new Product;
         <h2 class="main-subtitle">Novidades</h2>
         <article class="products">
             <?php foreach ($products->readByNews() as $product) { ?>
-                    <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
-                        ? DIR_IMG . '/' . $product['banner'] 
-                        : DIR_IMG . '/products/placeholder.png';?>
+                <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
+                    ? DIR_IMG . '/' . $product['banner'] 
+                    : DIR_IMG . '/products/placeholder.png';?>
 
-                    <figure class="product-items">
-                        <a href="?page=product&slug=<?= $product['slug'] ?>">
-                            <div class="background-product">
-                                <img class="image-product" src="<?= $image ?>" alt="">
-                            </div>
-                        </a>
-
-                        <div class="items-about">
-                            <a href="?page=product&slug=<?= $product['slug'] ?>" class="product-slug">
-                                <figcaption class="about"><?= $product['name'] ?></figcaption>
-                            </a>
-                            
-                            <figcaption class="value">R$ <?= str_replace('.', ',', $product['special_price']) ?></figcaption>
+                <figure class="product-items">
+                    <a href="?page=product&slug=<?= $product['slug'] ?>">
+                        <div class="background-product">
+                            <img class="image-product" src="<?= $image ?>" alt="">
                         </div>
-                    </figure>
+                    </a>
+
+                    <div class="items-about">
+                        <a href="?page=product&slug=<?= $product['slug'] ?>" class="product-slug">
+                            <figcaption class="about"><?= $product['name'] ?></figcaption>
+                        </a>
+                        
+                        <figcaption class="value">R$ <?= str_replace('.', ',', $product['special_price']) ?></figcaption>
+                    </div>
+                </figure>
             <?php } ?>
         </article>
     </section>
