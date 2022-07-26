@@ -48,7 +48,7 @@ if (isset($_SESSION['cart']) && isset($_SESSION['customer'])) {
                 <th class="table-title product-title table-first">Produto</th>
                 <th class="table-title product-title table-quantity">Quantidade</th>
                 <th class="table-title product-title table-value">Valor</th>
-                <th class="table-title product-title table-remove">Quantidade</th>
+                <th class="table-title product-title table-remove">Remover</th>
             </tr>
         </thead>
         
