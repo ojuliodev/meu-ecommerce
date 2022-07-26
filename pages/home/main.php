@@ -15,7 +15,6 @@ $products = new Product;
 
     <section class="main-products">
         <h2 class="main-subtitle">Novidades</h2>
-
         <?php foreach ($products->readByNews() as $product) { ?>
             <article class="products">
                     <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
@@ -39,8 +38,9 @@ $products = new Product;
                     </figure>
                 <?php } ?>
             </article>
-            
+    </section>
 
+    <section class="main-products">
         <?php foreach ($productCategory->read() as $category) { ?>
             <?php $products = $productCategory->readByCategory($category['category_id'])?>
 
