@@ -14,31 +14,32 @@ $products = new Product;
     </div>
 
     <section class="main-products">
-        <h2 class="main-subtitle">Novidades</h2>
+        <?php foreach ($products->readByNews() as $product) { ?>
+            <h2 class="main-subtitle">Novidades</h2>
+
             <article class="products">
-                <?php foreach ($products->read() as $product) { ?>
-                <?php foreach ($products->readByNews($product['product_id']) as $news) { ?>
-                    <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $news['banner']) 
-                        ? DIR_IMG . '/' . $news['banner'] 
+                    <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
+                        ? DIR_IMG . '/' . $product['banner'] 
                         : DIR_IMG . '/products/placeholder.png';?>
 
                     <figure class="product-items">
-                        <a href="?page=product&slug=<?= $news['slug'] ?>">
+                        <a href="?page=product&slug=<?= $product['slug'] ?>">
                             <div class="background-product">
                                 <img class="image-product" src="<?= $image ?>" alt="">
                             </div>
                         </a>
 
                         <div class="items-about">
-                            <a href="?page=product&slug=<?= $news['slug'] ?>" class="product-slug">
-                                <figcaption class="about"><?= $news['name'] ?></figcaption>
+                            <a href="?page=product&slug=<?= $product['slug'] ?>" class="product-slug">
+                                <figcaption class="about"><?= $product['name'] ?></figcaption>
                             </a>
                             
-                            <figcaption class="value">R$ <?= str_replace('.', ',', $news['special_price']) ?></figcaption>
+                            <figcaption class="value">R$ <?= str_replace('.', ',', $product['special_price']) ?></figcaption>
                         </div>
                     </figure>
-                <?php }} ?>
+                <?php } ?>
             </article>
+            
 
         <?php foreach ($productCategory->read() as $category) { ?>
             <?php $products = $productCategory->readByCategory($category['category_id'])?>

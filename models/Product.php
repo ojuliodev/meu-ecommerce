@@ -115,10 +115,10 @@ class Product extends Database
         }
     }
 
-    public function readByNews($data)
+    public function readByNews()
     {
         try {
-            $this->setSql("SELECT * FROM " . $this->table . " order by $data DESC LIMIT 4");
+            $this->setSql("SELECT * FROM " . $this->table . " order by product_id DESC LIMIT 4");
 
             $this->stmt = $this->conn->prepare($this->getSql());
 
