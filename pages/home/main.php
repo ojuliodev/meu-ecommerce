@@ -14,9 +14,9 @@ $products = new Product;
     </div>
 
     <section class="main-products">
-        <?php foreach ($products->readByNews() as $product) { ?>
-            <h2 class="main-subtitle">Novidades</h2>
+        <h2 class="main-subtitle">Novidades</h2>
 
+        <?php foreach ($products->readByNews() as $product) { ?>
             <article class="products">
                     <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
                         ? DIR_IMG . '/' . $product['banner'] 
