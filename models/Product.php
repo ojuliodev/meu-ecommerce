@@ -151,17 +151,17 @@ class Product extends Database
 
             $this->stmt = $this->conn->prepare($this->getSql());
 
-            if (isset($_FILES['image']) && !empty($_FILES['image']['tmp_name'])) {
-                $this->deleteFile($data['product_id']);
-
-                $id = $data['product_id'];
-
-                $destiny = $this->createFile($_FILES['image'], $id);
-
-                $this->updateByField($destiny, 'banner', $id);
-            }
-
             if ($this->stmt->execute()) {
+                if (isset($_FILES['image']) && !empty($_FILES['image']['tmp_name'])) {
+                    $this->deleteFile($data['product_id']);
+                    
+                    $id = $data['product_id'];
+    
+                    $destiny = $this->createFile($_FILES['image'], $id);
+    
+                    $this->updateByField($destiny, 'banner', $id);
+                }
+                
                 return true;
             } else {
                 return false;
