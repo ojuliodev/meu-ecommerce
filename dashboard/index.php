@@ -46,14 +46,19 @@ $page = $_GET['page'];
 
             <?php  
 
-            if (file_exists( __DIR__ . '/pages/' . $page . '/main.php')) {
-                require_once( __DIR__ . '/pages/' . $page . '/main.php');
-            } else {
-                header("Location: index.php?page=read");
-            }
+            if (isset($_SESSION['customer']) && $_SESSION['customer']['admin'] == 1) {
+                if (file_exists( __DIR__ . '/pages/' . $page . '/main.php')) {
+                    require_once( __DIR__ . '/pages/' . $page . '/main.php');
+                } else {
+                    header("Location: index.php?page=read");
+                }
+    
+                if (!isset($page)) {
+                    header("Location: index.php?page=read");
+                }
 
-            if (!isset($page)) {
-                header("Location: index.php?page=read");
+            } else {
+                header("Location: ../index.php?page=home");
             }
             
             ?>

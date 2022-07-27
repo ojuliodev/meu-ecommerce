@@ -173,6 +173,10 @@
         font-size: 15px;
     }
 
+    .all-products {
+        font-size: 12px;
+    }
+
     .background-product {
         height: 280px;
     }
@@ -390,6 +394,10 @@
 
     .main {
         margin-top: 30px;
+    }
+
+    .all-products {
+        display: none;
     }
 
     .product-items {
