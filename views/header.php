@@ -25,37 +25,35 @@ $productCategory = new ProductCategory;
     </form>
 
     <div class="main-menu-burguer">
-        <div class="checkbox-wrapper">
-            <label class="hamburguer" for="menu-burguer"> <i class="fa-solid fa-bars fa-2xl"></i> </label>
-            <input type="checkbox" id="menu-burguer">
+        <label class="hamburguer" for="menu-burguer"> <i class="fa-solid fa-bars fa-2xl"></i> </label>
+        <input type="checkbox" id="menu-burguer">
 
-            <nav class="menu-items">
-                <div class="close-wrapper">
-                    <h2>Categoria</h2>
-                    <label class="close-menu" for="menu-burguer"><i class="fa-solid fa-xmark fa-2xl"></i></label>
-                </div>
-                <ul class="category-items">
-                    <li> <a class="items items-menu" href="index.php?page=home">Início</a> </li>
+        <nav class="menu-items">
+            <div class="close-wrapper">
+                <h2>Categoria</h2>
+                <label class="close-menu" for="menu-burguer"><i class="fa-solid fa-xmark fa-2xl"></i></label>
+            </div>
+            <ul class="category-items">
+                <li> <a class="items items-menu" href="index.php?page=home">Início</a> </li>
 
-                    <?php foreach($productCategory->read() as $category) { ?>
+                <?php foreach($productCategory->read() as $category) { ?>
 
-                    <li> <a class="items items-menu" href="<?= DIR_PATH . 'index.php?page=category&slug=' . $category['slug']?>"><?= $category['name'] ?></a> </li>
+                <li> <a class="items items-menu" href="<?= DIR_PATH . 'index.php?page=category&slug=' . $category['slug']?>"><?= $category['name'] ?></a> </li>
 
-                    <?php } ?>
-                    <li> <a class="items items-menu" href="index.php?page=about">Sobre</a> </li>   
-                </ul>
+                <?php } ?>
+                <li> <a class="items items-menu" href="index.php?page=about">Sobre</a> </li>   
+            </ul>
 
-                <ul class="category-items">
-                    <li> <h2 class="menu-title">Conta</h2> </li>
-                    <li> <a class="items items-menu" href="index.php?page=cart"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a> </li>
-                    <li> <a class="items items-menu" href="index.php?page=customer<?= !empty($_SESSION['customer']) ? '&action=read' : ''?>"><i class="fa-solid fa-user"></i> Conta</a> </li>
+            <ul class="category-items">
+                <li> <h2 class="menu-title">Conta</h2> </li>
+                <li> <a class="items items-menu" href="index.php?page=cart"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a> </li>
+                <li> <a class="items items-menu" href="index.php?page=customer<?= !empty($_SESSION['customer']) ? '&action=read' : ''?>"><i class="fa-solid fa-user"></i> Conta</a> </li>
 
-                    <?php if (isset($_SESSION['customer'])): ?>
-                    <li> <a class="items items-menu" href="index.php?page=customer&action=logout"><i class="fa-solid fa-user"></i> Sair da Conta</a> </li>
-                    <?php endif ?>
-                </ul>
-            </nav>
-        </div>
+                <?php if (isset($_SESSION['customer'])): ?>
+                <li> <a class="items items-menu" href="index.php?page=customer&action=logout"><i class="fa-solid fa-user"></i> Sair da Conta</a> </li>
+                <?php endif ?>
+            </ul>
+        </nav>
     </div>
 
     <div class="icons">
