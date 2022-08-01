@@ -17,7 +17,7 @@ $products = new Product;
         <h2 class="main-subtitle">Novidades</h2>
         <article class="products">
             <?php foreach ($products->readByNews() as $product) { ?>
-                <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
+                <?php $image = file_exists(DIR_DOCUMENT . '/ecommerce/assets/images/' . $product['banner']) 
                     ? DIR_IMG . '/' . $product['banner'] 
                     : DIR_IMG . '/products/placeholder.png';?>
 
@@ -52,7 +52,7 @@ $products = new Product;
 
                 <article class="products">
                     <?php foreach ($products as $product) { ?>
-                        <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $product['banner']) 
+                        <?php $image = file_exists(DIR_DOCUMENT . '/ecommerce/assets/images/' . $product['banner']) 
                             ? DIR_IMG . '/' . $product['banner'] 
                             : DIR_IMG . '/products/placeholder.png';?>
 

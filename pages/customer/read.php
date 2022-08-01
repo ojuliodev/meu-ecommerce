@@ -54,7 +54,7 @@ if (isset($_SESSION['customer'])) {
         </thead>
         
         <tbody>
-            <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $user['image']) 
+            <?php $image = file_exists(DIR_DOCUMENT . '/ecommerce/assets/images/' . $user['image']) 
                 ? DIR_IMG . '/' . $user['image'] 
                 : DIR_IMG . '/products/placeholder.png';?>
             <tr>
@@ -92,7 +92,7 @@ if (isset($_SESSION['customer'])) {
                 <li class="customer-orders">
                     <p><?= "Pedido $index" ?></p>
                     <?php foreach($products as $product): ?>
-                        <?php $image = file_exists(DIR_DOCUMENT . '/assets/images/' . $user['image']) 
+                        <?php $image = file_exists(DIR_DOCUMENT . '/ecommerce/assets/images/' . $user['image']) 
                             ? DIR_IMG . '/' . $product['banner'] 
                             : DIR_IMG . '/products/placeholder.png';?>
 
