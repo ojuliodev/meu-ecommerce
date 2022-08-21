@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `customer` (`customer_id`, `name`, `image`, `age`, `email`, `password`, `status`, `admin`, `created_at`, `updated_at`) VALUES
-	(1, 'Julio', 'customer/1.jpg', 16, 'juliocesarjc025@gmail.com', '3fcd059d8bc8088ab54d06db1ddd61fc', 1, 1, '2022-07-25 23:33:26', '2022-07-25 23:33:26');
+	(1, 'Julio', 'customer/1.jpg', 16, 'ojuliocesar@gmail.com', 'ecd1c172f1b762928ee66753b2edd5d9', 1, 1, '2022-07-25 23:33:26', '2022-07-25 23:33:26');
 
 CREATE TABLE IF NOT EXISTS `product` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -68,7 +68,7 @@ INSERT INTO `product` (`product_id`, `category_id`, `name`, `banner`, `amount`, 
 	(27, 1, 'Headset Gamer Razer Kraken', 'products/27.png', 76, 'O seu estilo gamer nunca mais será o mesmo depois deste Headset Gamer Razer Kraken Tournament. Com seu design inconfundível, sua cor exuberante e toda a sua tecnologia, este headset Razer vai te conquistar.', 829.9, 987.99, 'headset-gamer-razer-kraken', 1, '2022-07-26 15:29:47', '2022-07-26 15:29:47'),
 	(28, 4, 'Camiseta Nike Brasil', 'products/28.png', 77, 'Camiseta para curtir a Copa do Mundo em 2022', 114.97, 129.99, 'camiseta-nike-brasil', 1, '2022-07-26 17:27:28', '2022-07-26 17:27:28'),
 	(29, 3, 'Fone De Ouvido i12 Bluetooth', 'products/29.png', 54, 'O Fone De Ouvido Sem Fio Bluetooth 5.0 I12s Touch Android/IOS é de alta qualidade e traz conforto e liberdade para o dia a dia e até mesmo para prática de esportes.', 59, 66.99, 'fone-de-ouvido-i12-bluetooth', 1, '2022-07-26 17:30:41', '2022-07-26 17:30:41'),
-	(30, 5, 'Mesa de Cabeceira', 'products/30.png', 7, 'Mesa de Cabeceira Retrô com 2 Gavetas 1 Nicho e Pés Palito Decor - ViaNossa', 40, 200, 'mesa-de-cabeceira', 1, '2022-07-26 17:34:45', '2022-07-26 17:34:45'),
+	(30, 5, 'Mesa de Cabeceira', 'products/30.png', 6, 'Mesa de Cabeceira Retrô com 2 Gavetas 1 Nicho e Pés Palito Decor - ViaNossa', 40, 200, 'mesa-de-cabeceira', 1, '2022-07-26 17:34:45', '2022-07-26 17:34:45'),
 	(31, 5, 'Mesa Retangular Helena Pequena', 'products/31.png', 33, 'Produto produzido com textura alto relevo, acabamento em Impressão ultra violeta, tampo verniz alto brilho e base verniz fosco.', 255.99, 345.88, 'mesa-retangular-helena-pequena', 1, '2022-07-26 17:37:03', '2022-07-26 17:37:03');
 
 CREATE TABLE IF NOT EXISTS `product_category` (
